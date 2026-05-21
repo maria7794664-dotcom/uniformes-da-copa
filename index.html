@@ -1,0 +1,499 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evolução dos Uniformes do Brasil</title>
+
+  <style>
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body{
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #222;
+      scroll-behavior: smooth;
+    }
+
+    /* MENU */
+
+    header{
+      background: #009739;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav h1{
+      color: white;
+      font-size: 2rem;
+    }
+
+    nav ul{
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    nav a{
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    nav a:hover{
+      color: #FFDF00;
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height: 100vh;
+      background: linear-gradient(to right, #009739, #FFDF00);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+
+      padding: 50px;
+      flex-wrap: wrap;
+    }
+
+    .hero-text{
+      max-width: 500px;
+    }
+
+    .hero h2{
+      font-size: 3.5rem;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .hero p{
+      font-size: 1.3rem;
+      color: white;
+    }
+
+    .hero img{
+      width: 350px;
+      border-radius: 20px;
+
+      box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
+
+      transition: 0.4s;
+    }
+
+    .hero img:hover{
+      transform: scale(1.05);
+    }
+
+    /* TÍTULOS */
+
+    .titulo{
+      text-align: center;
+      font-size: 3rem;
+      margin: 60px 0;
+      color: #009739;
+    }
+
+    /* CARDS */
+
+    .card{
+      background: white;
+
+      width: 85%;
+      margin: 30px auto;
+
+      display: flex;
+      align-items: center;
+      gap: 30px;
+
+      padding: 25px;
+
+      border-radius: 20px;
+
+      box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+
+      transition: 0.4s;
+    }
+
+    .card:hover{
+      transform: translateY(-5px);
+    }
+
+    .card img{
+      width: 260px;
+      border-radius: 15px;
+    }
+
+    .card-text h3{
+      font-size: 2rem;
+      color: #002776;
+      margin-bottom: 15px;
+    }
+
+    .card-text p{
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .card-text ul{
+      margin-left: 20px;
+      line-height: 1.8;
+    }
+
+    /* CURIOSIDADES */
+
+    .curiosidades{
+      padding: 50px;
+    }
+
+    .curiosidade-box{
+      background: white;
+
+      width: 80%;
+      margin: 25px auto;
+
+      padding: 25px;
+
+      border-left: 8px solid #FFDF00;
+
+      border-radius: 15px;
+
+      box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+
+      transition: 0.4s;
+    }
+
+    .curiosidade-box:hover{
+      transform: scale(1.02);
+    }
+
+    .curiosidade-box h3{
+      color: #009739;
+      margin-bottom: 10px;
+    }
+
+    .curiosidade-box p{
+      line-height: 1.6;
+    }
+
+    /* RODAPÉ */
+
+    footer{
+      background: #002776;
+      color: white;
+
+      text-align: center;
+      padding: 25px;
+
+      margin-top: 50px;
+    }
+
+    /* RESPONSIVO */
+
+    @media(max-width: 900px){
+
+      .card{
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero h2{
+        font-size: 2.5rem;
+      }
+
+      nav{
+        justify-content: center;
+        gap: 20px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- MENU -->
+
+  <header>
+
+    <nav>
+
+      <h1>Brasil em Campo 🇧🇷</h1>
+
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#timeline">Linha do Tempo</a></li>
+        <li><a href="#curiosidades">Curiosidades</a></li>
+      </ul>
+
+    </nav>
+
+  </header>
+
+  <!-- INÍCIO -->
+
+  <section class="hero" id="inicio">
+
+    <div class="hero-text">
+
+      <h2>
+        A Evolução das Camisas que Marcaram Gerações
+      </h2>
+
+      <p>
+        Conheça a história e a evolução dos uniformes da seleção brasileira nas Copas do Mundo.
+      </p>
+
+    </div>
+
+    <img src="images/selecao.png" alt="Seleção Brasileira">
+
+  </section>
+
+  <!-- LINHA DO TEMPO -->
+
+  <section id="timeline">
+
+    <h2 class="titulo">
+      Linha do Tempo dos Uniformes
+    </h2>
+
+    <!-- 1958 -->
+
+    <div class="card">
+
+      <img src="images/1958.jpg" alt="Uniforme 1958">
+
+      <div class="card-text">
+
+        <h3>1958 🇧🇷</h3>
+
+        <p>
+          O uniforme de 1958 marcou a primeira conquista mundial do Brasil e ficou eternizado com Pelé.
+        </p>
+
+        <ul>
+          <li>Camisa amarela clássica</li>
+          <li>Tecido pesado</li>
+          <li>Design simples</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- 1970 -->
+
+    <div class="card">
+
+      <img src="images/1970.jpg" alt="Uniforme 1970">
+
+      <div class="card-text">
+
+        <h3>1970 🇧🇷</h3>
+
+        <p>
+          Considerado um dos uniformes mais famosos da história das Copas.
+        </p>
+
+        <ul>
+          <li>Amarelo vibrante</li>
+          <li>Número verde</li>
+          <li>Uniforme icônico</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- 1994 -->
+
+    <div class="card">
+
+      <img src="images/1994.jpg" alt="Uniforme 1994">
+
+      <div class="card-text">
+
+        <h3>1994 🇧🇷</h3>
+
+        <p>
+          O Brasil voltou a conquistar a Copa depois de 24 anos.
+        </p>
+
+        <ul>
+          <li>Detalhes geométricos</li>
+          <li>Visual moderno</li>
+          <li>Estilo diferente</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- 2002 -->
+
+    <div class="card">
+
+      <img src="images/2002.jpg" alt="Uniforme 2002">
+
+      <div class="card-text">
+
+        <h3>2002 🇧🇷</h3>
+
+        <p>
+          Uniforme usado no pentacampeonato mundial.
+        </p>
+
+        <ul>
+          <li>Produzido pela Nike</li>
+          <li>Gola verde</li>
+          <li>Visual esportivo</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- 2022 -->
+
+    <div class="card">
+
+      <img src="images/2022.jpg" alt="Uniforme 2022">
+
+      <div class="card-text">
+
+        <h3>2022 🇧🇷</h3>
+
+        <p>
+          Uniforme inspirado na onça-pintada e com estilo moderno.
+        </p>
+
+        <ul>
+          <li>Estampa moderna</li>
+          <li>Tecido tecnológico</li>
+          <li>Visual ousado</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- 2026 -->
+
+    <div class="card">
+
+      <img src="images/2026.jpg" alt="Uniforme 2026">
+
+      <div class="card-text">
+
+        <h3>2026 🔮</h3>
+
+        <p>
+          Uma possível visão futurista para os próximos uniformes da seleção brasileira.
+        </p>
+
+        <ul>
+          <li>Design futurista</li>
+          <li>Novas tecnologias</li>
+          <li>Visual moderno</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CURIOSIDADES -->
+
+  <section class="curiosidades" id="curiosidades">
+
+    <h2 class="titulo">
+      Curiosidades
+    </h2>
+
+    <div class="curiosidade-box">
+
+      <h3>💛 Por que o Brasil usa amarelo?</h3>
+
+      <p>
+        Antes de 1954, o Brasil utilizava uniforme branco. Após a derrota na Copa de 1950, foi criado um novo uniforme inspirado nas cores da bandeira brasileira.
+      </p>
+
+    </div>
+
+    <div class="curiosidade-box">
+
+      <h3>💙 Quando surgiu a camisa azul?</h3>
+
+      <p>
+        A camisa azul ganhou destaque na final da Copa de 1958, quando o Brasil precisou trocar de uniforme.
+      </p>
+
+    </div>
+
+    <div class="curiosidade-box">
+
+      <h3>⭐ Uniforme mais famoso</h3>
+
+      <p>
+        O uniforme de 1970 é considerado um dos mais icônicos da história do futebol.
+      </p>
+
+    </div>
+
+    <div class="curiosidade-box">
+
+      <h3>✔️ Mudanças da Nike</h3>
+
+      <p>
+        A Nike passou a produzir os uniformes da seleção brasileira em 1996.
+      </p>
+
+    </div>
+
+    <div class="curiosidade-box">
+
+      <h3>😮 Uniformes polêmicos</h3>
+
+      <p>
+        Alguns modelos modernos dividiram opiniões por mudarem o design tradicional da seleção.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- RODAPÉ -->
+
+  <footer>
+
+    <p>
+      Site desenvolvido para trabalho escolar 🇧🇷
+    </p>
+
+  </footer>
+
+</body>
+</html>
+```
