@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Evolução dos Uniformes do Brasil</title>
+  <title>A História e Evolução dos Uniformes da Seleção Brasileira nas Copas do Mundo</title>
 
   <style>
 
@@ -18,98 +18,25 @@
       font-family: Arial, sans-serif;
       background: #f5f5f5;
       color: #222;
-      scroll-behavior: smooth;
     }
 
-    /* MENU */
-
-    header{
-      background: #009739;
-      padding: 20px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    nav h1{
-      color: white;
-      font-size: 2rem;
-    }
-
-    nav ul{
-      display: flex;
-      gap: 20px;
-      list-style: none;
-    }
-
-    nav a{
-      color: white;
-      text-decoration: none;
-      transition: 0.3s;
-      font-weight: bold;
-    }
-
-    nav a:hover{
-      color: #FFDF00;
-    }
-
-    /* HERO */
-
-    .hero{
-      min-height: 100vh;
-      background: linear-gradient(to right, #009739, #FFDF00);
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 50px;
-
-      padding: 50px;
-      flex-wrap: wrap;
-    }
-
-    .hero-text{
-      max-width: 500px;
-    }
-
-    .hero h2{
-      font-size: 3.5rem;
-      color: white;
-      margin-bottom: 20px;
-    }
-
-    .hero p{
-      font-size: 1.3rem;
-      color: white;
-    }
-
-    .hero img{
-      width: 350px;
-      border-radius: 20px;
-
-      box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
-
-      transition: 0.4s;
-    }
-
-    .hero img:hover{
-      transform: scale(1.05);
-    }
-
-    /* TÍTULOS */
+    /* TÍTULO */
 
     .titulo{
       text-align: center;
       font-size: 3rem;
-      margin: 60px 0;
       color: #009739;
+
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    /* LINHA DO TEMPO */
+
+    .timeline{
+      width: 90%;
+      margin: auto;
+      padding-bottom: 50px;
     }
 
     /* CARDS */
@@ -117,13 +44,11 @@
     .card{
       background: white;
 
-      width: 85%;
-      margin: 30px auto;
-
       display: flex;
       align-items: center;
       gap: 30px;
 
+      margin-bottom: 30px;
       padding: 25px;
 
       border-radius: 20px;
@@ -138,14 +63,14 @@
     }
 
     .card img{
-      width: 260px;
+      width: 250px;
       border-radius: 15px;
     }
 
-    .card-text h3{
-      font-size: 2rem;
+    .card-text h2{
       color: #002776;
       margin-bottom: 15px;
+      font-size: 2rem;
     }
 
     .card-text p{
@@ -158,54 +83,6 @@
       line-height: 1.8;
     }
 
-    /* CURIOSIDADES */
-
-    .curiosidades{
-      padding: 50px;
-    }
-
-    .curiosidade-box{
-      background: white;
-
-      width: 80%;
-      margin: 25px auto;
-
-      padding: 25px;
-
-      border-left: 8px solid #FFDF00;
-
-      border-radius: 15px;
-
-      box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
-
-      transition: 0.4s;
-    }
-
-    .curiosidade-box:hover{
-      transform: scale(1.02);
-    }
-
-    .curiosidade-box h3{
-      color: #009739;
-      margin-bottom: 10px;
-    }
-
-    .curiosidade-box p{
-      line-height: 1.6;
-    }
-
-    /* RODAPÉ */
-
-    footer{
-      background: #002776;
-      color: white;
-
-      text-align: center;
-      padding: 25px;
-
-      margin-top: 50px;
-    }
-
     /* RESPONSIVO */
 
     @media(max-width: 900px){
@@ -215,13 +92,13 @@
         text-align: center;
       }
 
-      .hero h2{
-        font-size: 2.5rem;
+      .card-text ul{
+        margin-left: 0;
+        list-style-position: inside;
       }
 
-      nav{
-        justify-content: center;
-        gap: 20px;
+      .titulo{
+        font-size: 2.2rem;
       }
 
     }
@@ -232,51 +109,11 @@
 
 <body>
 
-  <!-- MENU -->
+  <h1 class="titulo">
+    Linha do Tempo dos Uniformes da Seleção Brasileira 🇧🇷
+  </h1>
 
-  <header>
-
-    <nav>
-
-      <h1>Brasil em Campo 🇧🇷</h1>
-
-      <ul>
-        <li><a href="#inicio">Início</a></li>
-        <li><a href="#timeline">Linha do Tempo</a></li>
-        <li><a href="#curiosidades">Curiosidades</a></li>
-      </ul>
-
-    </nav>
-
-  </header>
-
-  <!-- INÍCIO -->
-
-  <section class="hero" id="inicio">
-
-    <div class="hero-text">
-
-      <h2>
-        A Evolução das Camisas que Marcaram Gerações
-      </h2>
-
-      <p>
-        Conheça a história e a evolução dos uniformes da seleção brasileira nas Copas do Mundo.
-      </p>
-
-    </div>
-
-    <img src="images/selecao.png" alt="Seleção Brasileira">
-
-  </section>
-
-  <!-- LINHA DO TEMPO -->
-
-  <section id="timeline">
-
-    <h2 class="titulo">
-      Linha do Tempo dos Uniformes
-    </h2>
+  <section class="timeline">
 
     <!-- 1958 -->
 
@@ -286,10 +123,10 @@
 
       <div class="card-text">
 
-        <h3>1958 🇧🇷</h3>
+        <h2>1958 🇧🇷</h2>
 
         <p>
-          O uniforme de 1958 marcou a primeira conquista mundial do Brasil e ficou eternizado com Pelé.
+          O uniforme de 1958 marcou a primeira conquista mundial do Brasil.
         </p>
 
         <ul>
@@ -310,7 +147,7 @@
 
       <div class="card-text">
 
-        <h3>1970 🇧🇷</h3>
+        <h2>1970 🇧🇷</h2>
 
         <p>
           Considerado um dos uniformes mais famosos da história das Copas.
@@ -334,7 +171,7 @@
 
       <div class="card-text">
 
-        <h3>1994 🇧🇷</h3>
+        <h2>1994 🇧🇷</h2>
 
         <p>
           O Brasil voltou a conquistar a Copa depois de 24 anos.
@@ -358,7 +195,7 @@
 
       <div class="card-text">
 
-        <h3>2002 🇧🇷</h3>
+        <h2>2002 🇧🇷</h2>
 
         <p>
           Uniforme usado no pentacampeonato mundial.
@@ -382,7 +219,7 @@
 
       <div class="card-text">
 
-        <h3>2022 🇧🇷</h3>
+        <h2>2022 🇧🇷</h2>
 
         <p>
           Uniforme inspirado na onça-pintada e com estilo moderno.
@@ -406,7 +243,7 @@
 
       <div class="card-text">
 
-        <h3>2026 🔮</h3>
+        <h2>2026 🔮</h2>
 
         <p>
           Uma possível visão futurista para os próximos uniformes da seleção brasileira.
@@ -423,76 +260,6 @@
     </div>
 
   </section>
-
-  <!-- CURIOSIDADES -->
-
-  <section class="curiosidades" id="curiosidades">
-
-    <h2 class="titulo">
-      Curiosidades
-    </h2>
-
-    <div class="curiosidade-box">
-
-      <h3>💛 Por que o Brasil usa amarelo?</h3>
-
-      <p>
-        Antes de 1954, o Brasil utilizava uniforme branco. Após a derrota na Copa de 1950, foi criado um novo uniforme inspirado nas cores da bandeira brasileira.
-      </p>
-
-    </div>
-
-    <div class="curiosidade-box">
-
-      <h3>💙 Quando surgiu a camisa azul?</h3>
-
-      <p>
-        A camisa azul ganhou destaque na final da Copa de 1958, quando o Brasil precisou trocar de uniforme.
-      </p>
-
-    </div>
-
-    <div class="curiosidade-box">
-
-      <h3>⭐ Uniforme mais famoso</h3>
-
-      <p>
-        O uniforme de 1970 é considerado um dos mais icônicos da história do futebol.
-      </p>
-
-    </div>
-
-    <div class="curiosidade-box">
-
-      <h3>✔️ Mudanças da Nike</h3>
-
-      <p>
-        A Nike passou a produzir os uniformes da seleção brasileira em 1996.
-      </p>
-
-    </div>
-
-    <div class="curiosidade-box">
-
-      <h3>😮 Uniformes polêmicos</h3>
-
-      <p>
-        Alguns modelos modernos dividiram opiniões por mudarem o design tradicional da seleção.
-      </p>
-
-    </div>
-
-  </section>
-
-  <!-- RODAPÉ -->
-
-  <footer>
-
-    <p>
-      Site desenvolvido para trabalho escolar 🇧🇷
-    </p>
-
-  </footer>
 
 </body>
 </html>
