@@ -1,9 +1,10 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Evolução das Camisas da Copa</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>História e Evolução das Camisas da Seleção Brasileira</title>
 
   <style>
     *{
@@ -14,78 +15,113 @@
 
     body{
       font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(to bottom, #0b6623, #14532d);
-      color:white;
+      background:#eef8f0;
+      color:#234b35;
+      line-height:1.6;
     }
 
     header{
-      text-align:center;
+      background:linear-gradient(135deg,#cdeccd,#9fd5b3);
       padding:60px 20px;
-      background: rgba(0,0,0,0.3);
+      text-align:center;
     }
 
     header h1{
       font-size:3rem;
       margin-bottom:15px;
-      color:#ffe600;
     }
 
     header p{
-      font-size:1.2rem;
-      max-width:700px;
+      max-width:800px;
       margin:auto;
+      font-size:1.1rem;
     }
 
     .timeline{
       width:90%;
-      max-width:1000px;
+      max-width:1200px;
       margin:50px auto;
+      display:flex;
+      flex-direction:column;
+      gap:35px;
     }
 
     .card{
       background:white;
-      color:#222;
       border-radius:20px;
       overflow:hidden;
-      margin-bottom:40px;
-      box-shadow:0 5px 15px rgba(0,0,0,0.3);
+      display:flex;
+      gap:25px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.08);
       transition:0.3s;
     }
 
     .card:hover{
-      transform:scale(1.02);
+      transform:translateY(-5px);
     }
 
-    .card img{
+    .image-box{
+      width:320px;
+      min-width:320px;
+      background:#dff3e3;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      padding:20px;
+    }
+
+    .image-box img{
       width:100%;
-      height:300px;
+      border-radius:15px;
       object-fit:cover;
     }
 
-    .info{
-      padding:25px;
-    }
-
-    .info h2{
-      color:#0b6623;
-      margin-bottom:10px;
+    .year{
+      margin-top:15px;
       font-size:2rem;
+      font-weight:bold;
+      color:#1d6b45;
     }
 
-    .info h3{
-      color:#c49b00;
+    .content{
+      padding:25px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .content h2{
       margin-bottom:15px;
+      color:#1c5b3b;
     }
 
-    .info p{
-      line-height:1.6;
+    .content p{
+      margin-bottom:10px;
     }
 
     footer{
       text-align:center;
       padding:30px;
-      background:#082014;
-      margin-top:50px;
+      background:#cdeccd;
+      margin-top:40px;
+    }
+
+    @media(max-width:900px){
+
+      .card{
+        flex-direction:column;
+      }
+
+      .image-box{
+        width:100%;
+        min-width:100%;
+      }
+
+      header h1{
+        font-size:2.2rem;
+      }
+
     }
   </style>
 </head>
@@ -93,11 +129,11 @@
 <body>
 
   <header>
-    <h1>Camisas das Copas do Mundo</h1>
+    <h1>História e Evolução das Camisas da Seleção Brasileira</h1>
 
     <p>
-      Uma linha do tempo mostrando a evolução das camisas
-      da Seleção Brasileira nas Copas do Mundo de 1958 até 2022.
+      Uma linha do tempo mostrando a evolução dos uniformes da Seleção Brasileira nas Copas do Mundo,
+      desde 1958 até 2022.
     </p>
   </header>
 
@@ -105,120 +141,292 @@
 
     <!-- 1958 -->
     <div class="card">
-      <img src="https://i.imgur.com/4lKQKkM.jpg">
+      <div class="image-box">
+        <img src="https://i.imgur.com/F5bK0hM.jpg" alt="Camisa Brasil 1958">
+        <div class="year">1958</div>
+      </div>
 
-      <div class="info">
-        <h2>1958</h2>
-        <h3>Suécia</h3>
-
+      <div class="content">
+        <h2>Copa do Mundo de 1958</h2>
+        <p><strong>País sede:</strong> Suécia</p>
         <p>
-          Primeira Copa vencida pelo Brasil. A camisa tinha um estilo
-          simples e clássico, marcando o início da tradição da amarelinha.
+          A camisa utilizada em 1958 ficou marcada pelo primeiro título mundial do Brasil.
+          O uniforme tinha um amarelo mais forte e detalhes verdes simples.
+        </p>
+        <p>
+          Foi nessa Copa que Pelé começou a ganhar destaque mundial.
         </p>
       </div>
     </div>
 
     <!-- 1962 -->
     <div class="card">
-      <img src="https://i.imgur.com/B3v6x7P.jpg">
+      <div class="image-box">
+        <img src="https://i.imgur.com/F5bK0hM.jpg" alt="Camisa Brasil 1962">
+        <div class="year">1962</div>
+      </div>
 
-      <div class="info">
-        <h2>1962</h2>
-        <h3>Chile</h3>
-
+      <div class="content">
+        <h2>Copa do Mundo de 1962</h2>
+        <p><strong>País sede:</strong> Chile</p>
         <p>
-          O Brasil conquistou o bicampeonato mundial.
-          O uniforme manteve o visual tradicional com poucos detalhes.
+          O Brasil manteve um estilo parecido com o uniforme de 1958.
+          A camisa continuou simples, mas ficou marcada pelo bicampeonato mundial.
+        </p>
+      </div>
+    </div>
+
+    <!-- 1966 -->
+    <div class="card">
+      <div class="image-box">
+        <img src="https://i.imgur.com/F5bK0hM.jpg" alt="Camisa Brasil 1966">
+        <div class="year">1966</div>
+      </div>
+
+      <div class="content">
+        <h2>Copa do Mundo de 1966</h2>
+        <p><strong>País sede:</strong> Inglaterra</p>
+        <p>
+          O uniforme passou por pequenas mudanças no tecido e na gola.
+          Apesar disso, a campanha brasileira não teve grande sucesso.
         </p>
       </div>
     </div>
 
     <!-- 1970 -->
     <div class="card">
-      <img src="https://i.imgur.com/Xm6L3rF.jpg">
+      <div class="image-box">
+        <img src="https://i.imgur.com/gqQ0G6K.jpg" alt="Camisa Brasil 1970">
+        <div class="year">1970</div>
+      </div>
 
-      <div class="info">
-        <h2>1970</h2>
-        <h3>México</h3>
-
+      <div class="content">
+        <h2>Copa do Mundo de 1970</h2>
+        <p><strong>País sede:</strong> México</p>
         <p>
-          Considerada uma das seleções mais icônicas da história.
-          A camisa ficou eternizada com Pelé e o tricampeonato.
+          Uma das camisas mais famosas da história do futebol.
+          O uniforme amarelo vibrante ficou eternizado com Pelé e o tricampeonato.
+        </p>
+      </div>
+    </div>
+
+    <!-- 1974 -->
+    <div class="card">
+      <div class="image-box">
+        <img src="https://i.imgur.com/gqQ0G6K.jpg" alt="Camisa Brasil 1974">
+        <div class="year">1974</div>
+      </div>
+
+      <div class="content">
+        <h2>Copa do Mundo de 1974</h2>
+        <p><strong>País sede:</strong> Alemanha Ocidental</p>
+        <p>
+          O uniforme ganhou detalhes mais modernos para a época,
+          mantendo as cores tradicionais da Seleção Brasileira.
+        </p>
+      </div>
+    </div>
+
+    <!-- 1978 -->
+    <div class="card">
+      <div class="image-box">
+        <img src="https://i.imgur.com/gqQ0G6K.jpg" alt="Camisa Brasil 1978">
+        <div class="year">1978</div>
+      </div>
+
+      <div class="content">
+        <h2>Copa do Mundo de 1978</h2>
+        <p><strong>País sede:</strong> Argentina</p>
+        <p>
+          A camisa apresentava um visual mais leve e esportivo,
+          acompanhando a evolução dos materiais utilizados no futebol.
         </p>
       </div>
     </div>
 
     <!-- 1982 -->
     <div class="card">
-      <img src="https://i.imgur.com/xL6jP6k.jpg">
+      <div class="image-box">
+        <img src="https://i.imgur.com/2s9Xn4K.jpg" alt="Camisa Brasil 1982">
+        <div class="year">1982</div>
+      </div>
 
-      <div class="info">
-        <h2>1982</h2>
-        <h3>Espanha</h3>
-
+      <div class="content">
+        <h2>Copa do Mundo de 1982</h2>
+        <p><strong>País sede:</strong> Espanha</p>
         <p>
-          Um uniforme muito lembrado pelos fãs por causa do futebol
-          bonito apresentado pela seleção brasileira.
+          A camisa de 1982 é considerada uma das mais bonitas da história.
+          Ficou marcada pelo time de Zico, Sócrates e Falcão.
+        </p>
+      </div>
+    </div>
+
+    <!-- 1986 -->
+    <div class="card">
+      <div class="image-box">
+        <img src="https://i.imgur.com/2s9Xn4K.jpg" alt="Camisa Brasil 1986">
+        <div class="year">1986</div>
+      </div>
+
+      <div class="content">
+        <h2>Copa do Mundo de 1986</h2>
+        <p><strong>País sede:</strong> México</p>
+        <p>
+          O uniforme ganhou detalhes mais modernos e tecidos mais confortáveis
+          para os jogadores.
+        </p>
+      </div>
+    </div>
+
+    <!-- 1990 -->
+    <div class="card">
+      <div class="image-box">
+        <img src="https://i.imgur.com/HM4P0wK.jpg" alt="Camisa Brasil 1990">
+        <div class="year">1990</div>
+      </div>
+
+      <div class="content">
+        <h2>Copa do Mundo de 1990</h2>
+        <p><strong>País sede:</strong> Itália</p>
+        <p>
+          A camisa trouxe estampas geométricas discretas,
+          seguindo a moda esportiva dos anos 90.
         </p>
       </div>
     </div>
 
     <!-- 1994 -->
     <div class="card">
-      <img src="https://i.imgur.com/Y9dZQ9Y.jpg">
+      <div class="image-box">
+        <img src="https://i.imgur.com/HM4P0wK.jpg" alt="Camisa Brasil 1994">
+        <div class="year">1994</div>
+      </div>
 
-      <div class="info">
-        <h2>1994</h2>
-        <h3>Estados Unidos</h3>
-
+      <div class="content">
+        <h2>Copa do Mundo de 1994</h2>
+        <p><strong>País sede:</strong> Estados Unidos</p>
         <p>
-          O Brasil conquistou o tetracampeonato.
-          A camisa tinha estampas geométricas que marcaram os anos 90.
+          O uniforme ficou muito famoso pelo tetracampeonato.
+          A camisa tinha desenhos em relevo inspirados nas estrelas da Seleção.
+        </p>
+      </div>
+    </div>
+
+    <!-- 1998 -->
+    <div class="card">
+      <div class="image-box">
+        <img src="https://i.imgur.com/7Ut5M0N.jpg" alt="Camisa Brasil 1998">
+        <div class="year">1998</div>
+      </div>
+
+      <div class="content">
+        <h2>Copa do Mundo de 1998</h2>
+        <p><strong>País sede:</strong> França</p>
+        <p>
+          A Nike passou a influenciar mais no design,
+          trazendo um estilo mais moderno e esportivo.
         </p>
       </div>
     </div>
 
     <!-- 2002 -->
     <div class="card">
-      <img src="https://i.imgur.com/2Q9rQxW.jpg">
+      <div class="image-box">
+        <img src="https://i.imgur.com/7Ut5M0N.jpg" alt="Camisa Brasil 2002">
+        <div class="year">2002</div>
+      </div>
 
-      <div class="info">
-        <h2>2002</h2>
-        <h3>Coreia do Sul e Japão</h3>
-
+      <div class="content">
+        <h2>Copa do Mundo de 2002</h2>
+        <p><strong>País sede:</strong> Coreia do Sul e Japão</p>
         <p>
-          Copa do pentacampeonato brasileiro.
-          O uniforme ficou famoso com Ronaldo, Rivaldo e Ronaldinho.
+          A camisa do pentacampeonato ficou marcada por detalhes verdes nas mangas
+          e pelo time de Ronaldo, Rivaldo e Ronaldinho.
+        </p>
+      </div>
+    </div>
+
+    <!-- 2006 -->
+    <div class="card">
+      <div class="image-box">
+        <img src="https://i.imgur.com/y4TR1Qm.jpg" alt="Camisa Brasil 2006">
+        <div class="year">2006</div>
+      </div>
+
+      <div class="content">
+        <h2>Copa do Mundo de 2006</h2>
+        <p><strong>País sede:</strong> Alemanha</p>
+        <p>
+          O uniforme trouxe um visual mais elegante e minimalista,
+          seguindo tendências modernas da época.
+        </p>
+      </div>
+    </div>
+
+    <!-- 2010 -->
+    <div class="card">
+      <div class="image-box">
+        <img src="https://i.imgur.com/y4TR1Qm.jpg" alt="Camisa Brasil 2010">
+        <div class="year">2010</div>
+      </div>
+
+      <div class="content">
+        <h2>Copa do Mundo de 2010</h2>
+        <p><strong>País sede:</strong> África do Sul</p>
+        <p>
+          O uniforme ficou conhecido pelo design mais simples
+          e por detalhes verdes na gola.
         </p>
       </div>
     </div>
 
     <!-- 2014 -->
     <div class="card">
-      <img src="https://i.imgur.com/7NlcR5M.jpg">
+      <div class="image-box">
+        <img src="https://i.imgur.com/TwKnM3d.jpg" alt="Camisa Brasil 2014">
+        <div class="year">2014</div>
+      </div>
 
-      <div class="info">
-        <h2>2014</h2>
-        <h3>Brasil</h3>
-
+      <div class="content">
+        <h2>Copa do Mundo de 2014</h2>
+        <p><strong>País sede:</strong> Brasil</p>
         <p>
-          Copa realizada no Brasil. A camisa trouxe um visual mais moderno
-          mantendo as cores tradicionais da seleção.
+          A camisa teve destaque por representar a Copa realizada no Brasil.
+          O modelo tinha gola verde e tecido mais tecnológico.
+        </p>
+      </div>
+    </div>
+
+    <!-- 2018 -->
+    <div class="card">
+      <div class="image-box">
+        <img src="https://i.imgur.com/TwKnM3d.jpg" alt="Camisa Brasil 2018">
+        <div class="year">2018</div>
+      </div>
+
+      <div class="content">
+        <h2>Copa do Mundo de 2018</h2>
+        <p><strong>País sede:</strong> Rússia</p>
+        <p>
+          O uniforme foi inspirado em modelos clássicos da Seleção Brasileira,
+          misturando tradição e modernidade.
         </p>
       </div>
     </div>
 
     <!-- 2022 -->
     <div class="card">
-      <img src="https://i.imgur.com/lmQm0Y0.jpg">
+      <div class="image-box">
+        <img src="https://i.imgur.com/5bhq8aR.jpg" alt="Camisa Brasil 2022">
+        <div class="year">2022</div>
+      </div>
 
-      <div class="info">
-        <h2>2022</h2>
-        <h3>Catar</h3>
-
+      <div class="content">
+        <h2>Copa do Mundo de 2022</h2>
+        <p><strong>País sede:</strong> Catar</p>
         <p>
-          A camisa apresentou detalhes inspirados na pele de onça,
-          trazendo um design moderno e diferente.
+          A camisa trouxe estampas inspiradas na pele da onça,
+          representando força e identidade brasileira.
         </p>
       </div>
     </div>
@@ -226,8 +434,9 @@
   </section>
 
   <footer>
-    <p>Desenvolvido por Maria Isabella 2° ano técnico 2026</p>
+    <p>Site desenvolvido para projeto escolar sobre a história das camisas da Seleção Brasileira.</p>
   </footer>
 
 </body>
 </html>
+```
