@@ -1,266 +1,233 @@
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A História e Evolução dos Uniformes da Seleção Brasileira nas Copas do Mundo</title>
+  <title>Evolução das Camisas da Copa</title>
 
   <style>
-
     *{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
     body{
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      color: #222;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(to bottom, #0b6623, #14532d);
+      color:white;
     }
 
-    /* TÍTULO */
-
-    .titulo{
-      text-align: center;
-      font-size: 3rem;
-      color: #009739;
-
-      margin-top: 50px;
-      margin-bottom: 50px;
+    header{
+      text-align:center;
+      padding:60px 20px;
+      background: rgba(0,0,0,0.3);
     }
 
-    /* LINHA DO TEMPO */
+    header h1{
+      font-size:3rem;
+      margin-bottom:15px;
+      color:#ffe600;
+    }
+
+    header p{
+      font-size:1.2rem;
+      max-width:700px;
+      margin:auto;
+    }
 
     .timeline{
-      width: 90%;
-      margin: auto;
-      padding-bottom: 50px;
+      width:90%;
+      max-width:1000px;
+      margin:50px auto;
     }
 
-    /* CARDS */
-
     .card{
-      background: white;
-
-      display: flex;
-      align-items: center;
-      gap: 30px;
-
-      margin-bottom: 30px;
-      padding: 25px;
-
-      border-radius: 20px;
-
-      box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
-
-      transition: 0.4s;
+      background:white;
+      color:#222;
+      border-radius:20px;
+      overflow:hidden;
+      margin-bottom:40px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.3);
+      transition:0.3s;
     }
 
     .card:hover{
-      transform: translateY(-5px);
+      transform:scale(1.02);
     }
 
     .card img{
-      width: 250px;
-      border-radius: 15px;
+      width:100%;
+      height:300px;
+      object-fit:cover;
     }
 
-    .card-text h2{
-      color: #002776;
-      margin-bottom: 15px;
-      font-size: 2rem;
+    .info{
+      padding:25px;
     }
 
-    .card-text p{
-      margin-bottom: 15px;
-      line-height: 1.6;
+    .info h2{
+      color:#0b6623;
+      margin-bottom:10px;
+      font-size:2rem;
     }
 
-    .card-text ul{
-      margin-left: 20px;
-      line-height: 1.8;
+    .info h3{
+      color:#c49b00;
+      margin-bottom:15px;
     }
 
-    /* RESPONSIVO */
-
-    @media(max-width: 900px){
-
-      .card{
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .card-text ul{
-        margin-left: 0;
-        list-style-position: inside;
-      }
-
-      .titulo{
-        font-size: 2.2rem;
-      }
-
+    .info p{
+      line-height:1.6;
     }
 
+    footer{
+      text-align:center;
+      padding:30px;
+      background:#082014;
+      margin-top:50px;
+    }
   </style>
-
 </head>
 
 <body>
 
-  <h1 class="titulo">
-    A História e Evolução dos Uniformes da Seleção Brasileira nas Copas do Mundo
-  </h1>
+  <header>
+    <h1>Camisas das Copas do Mundo</h1>
+
+    <p>
+      Uma linha do tempo mostrando a evolução das camisas
+      da Seleção Brasileira nas Copas do Mundo de 1958 até 2022.
+    </p>
+  </header>
 
   <section class="timeline">
 
     <!-- 1958 -->
-
     <div class="card">
+      <img src="https://i.imgur.com/4lKQKkM.jpg">
 
-      <img src="images/1958.jpg" alt="Uniforme 1958">
-
-      <div class="card-text">
-
-        <h2>1958 🇧🇷</h2>
+      <div class="info">
+        <h2>1958</h2>
+        <h3>Suécia</h3>
 
         <p>
-          O uniforme de 1958 marcou a primeira conquista mundial do Brasil.
+          Primeira Copa vencida pelo Brasil. A camisa tinha um estilo
+          simples e clássico, marcando o início da tradição da amarelinha.
         </p>
-
-        <ul>
-          <li>Camisa amarela clássica</li>
-          <li>Tecido pesado</li>
-          <li>Design simples</li>
-        </ul>
-
       </div>
+    </div>
 
+    <!-- 1962 -->
+    <div class="card">
+      <img src="https://i.imgur.com/B3v6x7P.jpg">
+
+      <div class="info">
+        <h2>1962</h2>
+        <h3>Chile</h3>
+
+        <p>
+          O Brasil conquistou o bicampeonato mundial.
+          O uniforme manteve o visual tradicional com poucos detalhes.
+        </p>
+      </div>
     </div>
 
     <!-- 1970 -->
-
     <div class="card">
+      <img src="https://i.imgur.com/Xm6L3rF.jpg">
 
-      <img src="images/1970.jpg" alt="Uniforme 1970">
-
-      <div class="card-text">
-
-        <h2>1970 🇧🇷</h2>
+      <div class="info">
+        <h2>1970</h2>
+        <h3>México</h3>
 
         <p>
-          Considerado um dos uniformes mais famosos da história das Copas.
+          Considerada uma das seleções mais icônicas da história.
+          A camisa ficou eternizada com Pelé e o tricampeonato.
         </p>
-
-        <ul>
-          <li>Amarelo vibrante</li>
-          <li>Número verde</li>
-          <li>Uniforme icônico</li>
-        </ul>
-
       </div>
+    </div>
 
+    <!-- 1982 -->
+    <div class="card">
+      <img src="https://i.imgur.com/xL6jP6k.jpg">
+
+      <div class="info">
+        <h2>1982</h2>
+        <h3>Espanha</h3>
+
+        <p>
+          Um uniforme muito lembrado pelos fãs por causa do futebol
+          bonito apresentado pela seleção brasileira.
+        </p>
+      </div>
     </div>
 
     <!-- 1994 -->
-
     <div class="card">
+      <img src="https://i.imgur.com/Y9dZQ9Y.jpg">
 
-      <img src="images/1994.jpg" alt="Uniforme 1994">
-
-      <div class="card-text">
-
-        <h2>1994 🇧🇷</h2>
+      <div class="info">
+        <h2>1994</h2>
+        <h3>Estados Unidos</h3>
 
         <p>
-          O Brasil voltou a conquistar a Copa depois de 24 anos.
+          O Brasil conquistou o tetracampeonato.
+          A camisa tinha estampas geométricas que marcaram os anos 90.
         </p>
-
-        <ul>
-          <li>Detalhes geométricos</li>
-          <li>Visual moderno</li>
-          <li>Estilo diferente</li>
-        </ul>
-
       </div>
-
     </div>
 
     <!-- 2002 -->
-
     <div class="card">
+      <img src="https://i.imgur.com/2Q9rQxW.jpg">
 
-      <img src="images/2002.jpg" alt="Uniforme 2002">
-
-      <div class="card-text">
-
-        <h2>2002 🇧🇷</h2>
+      <div class="info">
+        <h2>2002</h2>
+        <h3>Coreia do Sul e Japão</h3>
 
         <p>
-          Uniforme usado no pentacampeonato mundial.
+          Copa do pentacampeonato brasileiro.
+          O uniforme ficou famoso com Ronaldo, Rivaldo e Ronaldinho.
         </p>
-
-        <ul>
-          <li>Produzido pela Nike</li>
-          <li>Gola verde</li>
-          <li>Visual esportivo</li>
-        </ul>
-
       </div>
+    </div>
 
+    <!-- 2014 -->
+    <div class="card">
+      <img src="https://i.imgur.com/7NlcR5M.jpg">
+
+      <div class="info">
+        <h2>2014</h2>
+        <h3>Brasil</h3>
+
+        <p>
+          Copa realizada no Brasil. A camisa trouxe um visual mais moderno
+          mantendo as cores tradicionais da seleção.
+        </p>
+      </div>
     </div>
 
     <!-- 2022 -->
-
     <div class="card">
+      <img src="https://i.imgur.com/lmQm0Y0.jpg">
 
-      <img src="images/2022.jpg" alt="Uniforme 2022">
-
-      <div class="card-text">
-
-        <h2>2022 🇧🇷</h2>
+      <div class="info">
+        <h2>2022</h2>
+        <h3>Catar</h3>
 
         <p>
-          Uniforme inspirado na onça-pintada e com estilo moderno.
+          A camisa apresentou detalhes inspirados na pele de onça,
+          trazendo um design moderno e diferente.
         </p>
-
-        <ul>
-          <li>Estampa moderna</li>
-          <li>Tecido tecnológico</li>
-          <li>Visual ousado</li>
-        </ul>
-
       </div>
-
-    </div>
-
-    <!-- 2026 -->
-
-    <div class="card">
-
-      <img src="images/2026.jpg" alt="Uniforme 2026">
-
-      <div class="card-text">
-
-        <h2>2026 🔮</h2>
-
-        <p>
-          Uma possível visão futurista para os próximos uniformes da seleção brasileira.
-        </p>
-
-        <ul>
-          <li>Design futurista</li>
-          <li>Novas tecnologias</li>
-          <li>Visual moderno</li>
-        </ul>
-
-      </div>
-
     </div>
 
   </section>
 
+  <footer>
+    <p>Desenvolvido por Maria Isabella 2° ano técnico 2026</p>
+  </footer>
+
 </body>
 </html>
-```
