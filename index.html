@@ -1,418 +1,594 @@
-# Site HTML — Copa do Mundo 2026
-
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 <title>Copa do Mundo 2026</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-font-family:Arial, sans-serif;
-background:linear-gradient(135deg,#dff7e2,#f5fff6);
-color:#1f3d2a;
+    font-family:'Poppins',sans-serif;
+    background:
+    linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.65)),
+    url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1600&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:white;
+    min-height:100vh;
+    overflow-x:hidden;
 }
 
 header{
-background:#1c7c54;
-padding:25px;
-text-align:center;
-color:white;
-box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    text-align:center;
+    padding:40px 20px;
+    background:rgba(0,0,0,0.45);
+    backdrop-filter:blur(10px);
+    box-shadow:0 4px 20px rgba(0,0,0,0.5);
 }
 
 header h1{
-font-size:3rem;
+    font-size:3rem;
+    color:#ffeb3b;
+    text-shadow:2px 2px 10px black;
 }
 
 header p{
-margin-top:10px;
-font-size:1.1rem;
+    margin-top:10px;
+    font-size:1.1rem;
 }
 
 nav{
-background:#145a3b;
-padding:15px;
-display:flex;
-justify-content:center;
-gap:15px;
-flex-wrap:wrap;
-position:sticky;
-top:0;
-z-index:999;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    padding:20px;
 }
 
 nav button{
-padding:12px 20px;
-border:none;
-border-radius:10px;
-background:#ffffff;
-color:#145a3b;
-font-weight:bold;
-cursor:pointer;
-transition:0.3s;
+    padding:12px 20px;
+    border:none;
+    border-radius:14px;
+    cursor:pointer;
+    font-weight:700;
+    font-size:15px;
+    background:linear-gradient(45deg,#00c853,#2196f3);
+    color:white;
+    transition:0.3s;
+    box-shadow:0 4px 10px rgba(0,0,0,0.4);
 }
 
 nav button:hover{
-background:#b6f0c5;
-transform:scale(1.05);
+    transform:scale(1.08);
 }
 
 .tab{
-display:none;
-padding:30px;
-max-width:1300px;
-margin:auto;
+    display:none;
+    padding:30px;
+    animation:fade 0.4s;
 }
 
 .active{
-display:block;
+    display:block;
 }
 
-.card{
-background:white;
-border-radius:20px;
-padding:20px;
-margin-bottom:20px;
-box-shadow:0 4px 15px rgba(0,0,0,0.1);
-transition:0.3s;
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
-.card:hover{
-transform:translateY(-5px);
+.groups{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
 }
 
-.team-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
+.group-card{
+    background:rgba(255,255,255,0.08);
+    padding:20px;
+    border-radius:20px;
+    border:2px solid rgba(255,255,255,0.15);
+    transition:0.3s;
+    backdrop-filter:blur(8px);
 }
 
-.team-card{
-background:white;
-border-radius:20px;
-padding:20px;
-box-shadow:0 4px 12px rgba(0,0,0,0.1);
-text-align:center;
+.group-card:hover{
+    transform:translateY(-6px);
+    background:rgba(255,255,255,0.14);
 }
 
-.team-card .icon{
-font-size:4rem;
-margin-bottom:15px;
+.group-card h2{
+    color:#ffeb3b;
+    margin-bottom:15px;
+    text-align:center;
 }
 
-.team-card h3{
-margin-bottom:10px;
+.team{
+    margin:10px 0;
+    padding:12px;
+    border-radius:12px;
+    background:rgba(0,0,0,0.3);
+    transition:0.3s;
+}
+
+.team:hover{
+    background:rgba(255,255,255,0.15);
+    transform:scale(1.02);
+}
+
+.players-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.player-card{
+    background:rgba(255,255,255,0.08);
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 4px 20px rgba(0,0,0,0.4);
+    backdrop-filter:blur(8px);
+    transition:0.3s;
+}
+
+.player-card:hover{
+    transform:translateY(-5px);
+}
+
+.player-card h2{
+    color:#ffeb3b;
+    margin-bottom:10px;
+}
+
+.player-card p{
+    margin:8px 0;
 }
 
 .quiz-box{
-background:white;
-padding:25px;
-border-radius:20px;
-box-shadow:0 4px 15px rgba(0,0,0,0.1);
-max-width:700px;
-margin:auto;
+    max-width:700px;
+    margin:auto;
+    background:rgba(255,255,255,0.08);
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    backdrop-filter:blur(8px);
+}
+
+.quiz-box h2{
+    margin-bottom:20px;
 }
 
 .quiz-box button{
-margin-top:15px;
-padding:10px 20px;
-border:none;
-background:#1c7c54;
-color:white;
-border-radius:10px;
-cursor:pointer;
-font-weight:bold;
+    display:block;
+    width:100%;
+    margin:10px 0;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:bold;
+    font-size:15px;
+    background:linear-gradient(45deg,#2196f3,#00c853);
+    color:white;
+    transition:0.3s;
 }
 
 .quiz-box button:hover{
-background:#145a3b;
+    transform:scale(1.03);
+}
+
+#score{
+    margin-top:20px;
+    color:#ffeb3b;
 }
 
 footer{
-background:#145a3b;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:30px;
+    text-align:center;
+    padding:30px;
+    margin-top:30px;
+    background:rgba(0,0,0,0.45);
 }
 
-ul{
-padding-left:20px;
-margin-top:10px;
+canvas{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:-1;
 }
 
-li{
-margin-bottom:5px;
+@media(max-width:768px){
+
+    header h1{
+        font-size:2.2rem;
+    }
+
+    nav button{
+        width:100%;
+    }
+
 }
 
-h2{
-margin-bottom:20px;
-}
-
-.note{
-background:#fff7d6;
-padding:15px;
-border-radius:15px;
-margin-bottom:20px;
-line-height:1.6;
-}
 </style>
 </head>
+
 <body>
 
+<canvas id="bg"></canvas>
+
 <header>
+
 <h1>⚽ Copa do Mundo 2026</h1>
-<p>Site interativo com seleções, grupos, estrelas, escalações e quiz</p>
+
+<p>
+Site interativo com grupos, seleções, craques e quiz da Copa do Mundo FIFA 2026
+</p>
+
 </header>
 
 <nav>
-<button onclick="showTab('inicio')">Início</button>
-<button onclick="showTab('grupos')">Grupos</button>
-<button onclick="showTab('selecoes')">Seleções</button>
-<button onclick="showTab('estrelas')">Jogadores Estrela</button>
-<button onclick="showTab('escalacoes')">Escalações</button>
-<button onclick="showTab('quiz')">Quiz</button>
+
+<button onclick="showTab('grupos')">🌍 Grupos</button>
+
+<button onclick="showTab('jogadores')">⭐ Jogadores Estrela</button>
+
+<button onclick="showTab('quiz')">🧠 Quiz</button>
+
+<button onclick="showTab('sobre')">🏆 Sobre</button>
+
 </nav>
 
-<section id="inicio" class="tab active">
-<div class="card">
-<h2>🌎 Bem-vindo à Copa do Mundo 2026</h2>
-<p>
-A Copa do Mundo de 2026 será histórica, com 48 seleções participantes.
-Este site apresenta os grupos, jogadores estrela, escalações e um quiz interativo.
-</p>
+<section id="grupos" class="tab active">
+
+<h1 style="margin-bottom:20px;">🌎 Grupos da Copa 2026</h1>
+
+<div class="groups">
+
+<div class="group-card">
+<h2>Grupo A</h2>
+<div class="team">🇲🇽 México</div>
+<div class="team">🇿🇦 África do Sul</div>
+<div class="team">🇰🇷 Coreia do Sul</div>
+<div class="team">🇨🇿 República Tcheca</div>
 </div>
 
-<div class="note">
-<strong>Importante:</strong><br>
-As escalações oficiais da Copa de 2026 ainda não foram divulgadas pela FIFA.
-Por isso, este site utiliza as seleções informadas por você e apresenta jogadores destaque e prováveis formações baseadas nos elencos mais recentes das seleções.
+<div class="group-card">
+<h2>Grupo B</h2>
+<div class="team">🇨🇦 Canadá</div>
+<div class="team">🇧🇦 Bósnia e Herzegovina</div>
+<div class="team">🇶🇦 Catar</div>
+<div class="team">🇨🇭 Suíça</div>
 </div>
+
+<div class="group-card">
+<h2>Grupo C</h2>
+<div class="team">🇧🇷 Brasil</div>
+<div class="team">🇲🇦 Marrocos</div>
+<div class="team">🇭🇹 Haiti</div>
+<div class="team">🏴 Escócia</div>
+</div>
+
+<div class="group-card">
+<h2>Grupo D</h2>
+<div class="team">🇺🇸 Estados Unidos</div>
+<div class="team">🇵🇾 Paraguai</div>
+<div class="team">🇦🇺 Austrália</div>
+<div class="team">🇹🇷 Turquia</div>
+</div>
+
+<div class="group-card">
+<h2>Grupo E</h2>
+<div class="team">🇩🇪 Alemanha</div>
+<div class="team">🇨🇼 Curaçao</div>
+<div class="team">🇨🇮 Costa do Marfim</div>
+<div class="team">🇪🇨 Equador</div>
+</div>
+
+<div class="group-card">
+<h2>Grupo F</h2>
+<div class="team">🇳🇱 Holanda</div>
+<div class="team">🇯🇵 Japão</div>
+<div class="team">🇸🇪 Suécia</div>
+<div class="team">🇹🇳 Tunísia</div>
+</div>
+
+<div class="group-card">
+<h2>Grupo G</h2>
+<div class="team">🇧🇪 Bélgica</div>
+<div class="team">🇪🇬 Egito</div>
+<div class="team">🇮🇷 Irã</div>
+<div class="team">🇳🇿 Nova Zelândia</div>
+</div>
+
+<div class="group-card">
+<h2>Grupo H</h2>
+<div class="team">🇪🇸 Espanha</div>
+<div class="team">🇨🇻 Cabo Verde</div>
+<div class="team">🇸🇦 Arábia Saudita</div>
+<div class="team">🇺🇾 Uruguai</div>
+</div>
+
+</div>
+
 </section>
 
-<section id="grupos" class="tab">
-<h2>🏆 Grupos da Copa 2026</h2>
-<div class="team-grid">
-<div class="team-card"><div class="icon">🎨</div><h3>Grupo A</h3><p>México<br>África do Sul<br>Coreia do Sul<br>República Tcheca</p></div>
-<div class="team-card"><div class="icon">🦊</div><h3>Grupo B</h3><p>Canadá<br>Bósnia e Herzegovina<br>Catar<br>Suíça</p></div>
-<div class="team-card"><div class="icon">🐆</div><h3>Grupo C</h3><p>Brasil<br>Marrocos<br>Haiti<br>Escócia</p></div>
-<div class="team-card"><div class="icon">🦅</div><h3>Grupo D</h3><p>Estados Unidos<br>Paraguai<br>Austrália<br>Turquia</p></div>
-<div class="team-card"><div class="icon">🌟</div><h3>Grupo E</h3><p>Alemanha<br>Curaçao<br>Costa do Marfim<br>Equador</p></div>
-<div class="team-card"><div class="icon">🐉</div><h3>Grupo F</h3><p>Holanda<br>Japão<br>Suécia<br>Tunísia</p></div>
-<div class="team-card"><div class="icon">🛡️</div><h3>Grupo G</h3><p>Bélgica<br>Egito<br>Irã<br>Nova Zelândia</p></div>
-<div class="team-card"><div class="icon">🔥</div><h3>Grupo H</h3><p>Espanha<br>Cabo Verde<br>Arábia Saudita<br>Uruguai</p></div>
-<div class="team-card"><div class="icon">⚡</div><h3>Grupo I</h3><p>França<br>Senegal<br>Iraque<br>Noruega</p></div>
-<div class="team-card"><div class="icon">🎯</div><h3>Grupo J</h3><p>Argentina<br>Argélia<br>Áustria<br>Jordânia</p></div>
-<div class="team-card"><div class="icon">🌍</div><h3>Grupo K</h3><p>Portugal<br>RD Congo<br>Uzbequistão<br>Colômbia</p></div>
-<div class="team-card"><div class="icon">👑</div><h3>Grupo L</h3><p>Inglaterra<br>Croácia<br>Gana<br>Panamá</p></div>
+<section id="jogadores" class="tab">
+
+<h1 style="margin-bottom:20px;">⭐ Craques das Seleções</h1>
+
+<div class="players-grid">
+
+<div class="player-card">
+<h2>🇧🇷 Brasil</h2>
+<p>⭐ Vinícius Júnior</p>
+<p>⭐ Rodrygo</p>
+<p>⭐ Endrick</p>
+<p>⭐ Bruno Guimarães</p>
 </div>
-</section>
 
-<section id="selecoes" class="tab">
-<h2>🌍 Seleções Participantes</h2>
-<div class="team-grid">
+<div class="player-card">
+<h2>🇦🇷 Argentina</h2>
+<p>⭐ Julián Álvarez</p>
+<p>⭐ Enzo Fernández</p>
+<p>⭐ Lautaro Martínez</p>
+<p>⭐ Mac Allister</p>
+</div>
 
-<div class="team-card"><div class="icon">🌵</div><h3>México</h3><p>Tricampeão da CONCACAF e uma das seleções mais tradicionais da América do Norte.</p></div>
-<div class="team-card"><div class="icon">🦁</div><h3>África do Sul</h3><p>Primeiro país africano a sediar uma Copa do Mundo.</p></div>
-<div class="team-card"><div class="icon">🐯</div><h3>Coreia do Sul</h3><p>Conhecida pela velocidade e disciplina tática.</p></div>
-<div class="team-card"><div class="icon">🏰</div><h3>República Tcheca</h3><p>Seleção tradicional do futebol europeu.</p></div>
+<div class="player-card">
+<h2>🇫🇷 França</h2>
+<p>⭐ Kylian Mbappé</p>
+<p>⭐ Camavinga</p>
+<p>⭐ Tchouaméni</p>
+<p>⭐ Dembélé</p>
+</div>
 
-<div class="team-card"><div class="icon">🍁</div><h3>Canadá</h3><p>Uma das anfitriãs da Copa de 2026.</p></div>
-<div class="team-card"><div class="icon">🐺</div><h3>Bósnia e Herzegovina</h3><p>Seleção europeia com estilo ofensivo.</p></div>
-<div class="team-card"><div class="icon">🏜️</div><h3>Catar</h3><p>Sede da Copa do Mundo de 2022.</p></div>
-<div class="team-card"><div class="icon">⛰️</div><h3>Suíça</h3><p>Seleção forte defensivamente e consistente.</p></div>
+<div class="player-card">
+<h2>🇵🇹 Portugal</h2>
+<p>⭐ Cristiano Ronaldo</p>
+<p>⭐ Rafael Leão</p>
+<p>⭐ Bruno Fernandes</p>
+<p>⭐ João Neves</p>
+</div>
 
-<div class="team-card"><div class="icon">⭐</div><h3>Brasil</h3><p>Maior campeão da história das Copas do Mundo.</p></div>
-<div class="team-card"><div class="icon">🕌</div><h3>Marrocos</h3><p>Primeira seleção africana semifinalista de Copa.</p></div>
-<div class="team-card"><div class="icon">🌊</div><h3>Haiti</h3><p>Representante do Caribe na competição.</p></div>
-<div class="team-card"><div class="icon">🎻</div><h3>Escócia</h3><p>Uma das seleções mais antigas do futebol.</p></div>
+<div class="player-card">
+<h2>🇪🇸 Espanha</h2>
+<p>⭐ Lamine Yamal</p>
+<p>⭐ Pedri</p>
+<p>⭐ Nico Williams</p>
+<p>⭐ Rodri</p>
+</div>
 
-<div class="team-card"><div class="icon">🗽</div><h3>Estados Unidos</h3><p>Uma das sedes da Copa de 2026.</p></div>
-<div class="team-card"><div class="icon">🌴</div><h3>Paraguai</h3><p>Conhecida pela força defensiva.</p></div>
-<div class="team-card"><div class="icon">🦘</div><h3>Austrália</h3><p>Seleção veloz e física.</p></div>
-<div class="team-card"><div class="icon">🕌</div><h3>Turquia</h3><p>Terceiro lugar na Copa de 2002.</p></div>
-
-<div class="team-card"><div class="icon">🦅</div><h3>Alemanha</h3><p>Tetracampeã mundial.</p></div>
-<div class="team-card"><div class="icon">🌴</div><h3>Curaçao</h3><p>Seleção em crescimento no Caribe.</p></div>
-<div class="team-card"><div class="icon">🐘</div><h3>Costa do Marfim</h3><p>Tradicional potência africana.</p></div>
-<div class="team-card"><div class="icon">🌋</div><h3>Equador</h3><p>Seleção jovem e veloz.</p></div>
-
-<div class="team-card"><div class="icon">🌷</div><h3>Holanda</h3><p>Famosa pelo futebol total.</p></div>
-<div class="team-card"><div class="icon">🗾</div><h3>Japão</h3><p>Seleção disciplinada e técnica.</p></div>
-<div class="team-card"><div class="icon">❄️</div><h3>Suécia</h3><p>Histórica seleção europeia.</p></div>
-<div class="team-card"><div class="icon">🌞</div><h3>Tunísia</h3><p>Seleção africana competitiva.</p></div>
-
-<div class="team-card"><div class="icon">💎</div><h3>Bélgica</h3><p>Conhecida pela geração dourada.</p></div>
-<div class="team-card"><div class="icon">🐪</div><h3>Egito</h3><p>Seleção mais vitoriosa da África.</p></div>
-<div class="team-card"><div class="icon">🦅</div><h3>Irã</h3><p>Uma das maiores forças asiáticas.</p></div>
-<div class="team-card"><div class="icon">🌿</div><h3>Nova Zelândia</h3><p>Representante da Oceania.</p></div>
-
-<div class="team-card"><div class="icon">💃</div><h3>Espanha</h3><p>Campeã mundial em 2010.</p></div>
-<div class="team-card"><div class="icon">🏝️</div><h3>Cabo Verde</h3><p>Seleção africana em crescimento.</p></div>
-<div class="team-card"><div class="icon">🏜️</div><h3>Arábia Saudita</h3><p>Tradicional seleção asiática.</p></div>
-<div class="team-card"><div class="icon">☀️</div><h3>Uruguai</h3><p>Bicampeão mundial.</p></div>
-
-<div class="team-card"><div class="icon">🗼</div><h3>França</h3><p>Bicampeã mundial.</p></div>
-<div class="team-card"><div class="icon">🦁</div><h3>Senegal</h3><p>Grande potência africana atual.</p></div>
-<div class="team-card"><div class="icon">🏹</div><h3>Iraque</h3><p>Representante do Oriente Médio.</p></div>
-<div class="team-card"><div class="icon">❄️</div><h3>Noruega</h3><p>Seleção europeia em ascensão.</p></div>
-
-<div class="team-card"><div class="icon">🐐</div><h3>Argentina</h3><p>Atual campeã mundial.</p></div>
-<div class="team-card"><div class="icon">🌙</div><h3>Argélia</h3><p>Seleção africana tradicional.</p></div>
-<div class="team-card"><div class="icon">🎼</div><h3>Áustria</h3><p>Equipe europeia organizada.</p></div>
-<div class="team-card"><div class="icon">🏜️</div><h3>Jordânia</h3><p>Seleção asiática emergente.</p></div>
-
-<div class="team-card"><div class="icon">🚢</div><h3>Portugal</h3><p>Uma das seleções mais técnicas do mundo.</p></div>
-<div class="team-card"><div class="icon">🦍</div><h3>RD Congo</h3><p>Força física e velocidade.</p></div>
-<div class="team-card"><div class="icon">🏔️</div><h3>Uzbequistão</h3><p>Seleção asiática em evolução.</p></div>
-<div class="team-card"><div class="icon">☕</div><h3>Colômbia</h3><p>Conhecida pela técnica e criatividade.</p></div>
-
-<div class="team-card"><div class="icon">👑</div><h3>Inglaterra</h3><p>Campeã mundial em 1966.</p></div>
-<div class="team-card"><div class="icon">🔥</div><h3>Croácia</h3><p>Vice-campeã mundial em 2018.</p></div>
-<div class="team-card"><div class="icon">⭐</div><h3>Gana</h3><p>Uma das maiores seleções africanas.</p></div>
-<div class="team-card"><div class="icon">🌴</div><h3>Panamá</h3><p>Seleção em crescimento na CONCACAF.</p></div>
+<div class="player-card">
+<h2>🏴 Inglaterra</h2>
+<p>⭐ Jude Bellingham</p>
+<p>⭐ Harry Kane</p>
+<p>⭐ Bukayo Saka</p>
+<p>⭐ Phil Foden</p>
+</div>
 
 </div>
-</section>
 
-<section id="estrelas" class="tab">
-<h2>🌟 Jogadores Estrela</h2>
-<div class="card">
-<ul>
-<li>México — Santiago Giménez</li>
-<li>África do Sul — Percy Tau</li>
-<li>Coreia do Sul — Son Heung-min</li>
-<li>República Tcheca — Patrik Schick</li>
-<li>Canadá — Alphonso Davies</li>
-<li>Bósnia e Herzegovina — Edin Džeko</li>
-<li>Catar — Akram Afif</li>
-<li>Suíça — Granit Xhaka</li>
-<li>Brasil — Vinícius Júnior</li>
-<li>Marrocos — Achraf Hakimi</li>
-<li>Haiti — Duckens Nazon</li>
-<li>Escócia — Andrew Robertson</li>
-<li>Estados Unidos — Christian Pulisic</li>
-<li>Paraguai — Miguel Almirón</li>
-<li>Austrália — Mathew Ryan</li>
-<li>Turquia — Hakan Çalhanoğlu</li>
-<li>Alemanha — Jamal Musiala</li>
-<li>Curaçao — Leandro Bacuna</li>
-<li>Costa do Marfim — Sébastien Haller</li>
-<li>Equador — Moisés Caicedo</li>
-<li>Holanda — Virgil van Dijk</li>
-<li>Japão — Takefusa Kubo</li>
-<li>Suécia — Alexander Isak</li>
-<li>Tunísia — Youssef Msakni</li>
-<li>Bélgica — Kevin De Bruyne</li>
-<li>Egito — Mohamed Salah</li>
-<li>Irã — Mehdi Taremi</li>
-<li>Nova Zelândia — Chris Wood</li>
-<li>Espanha — Pedri</li>
-<li>Cabo Verde — Bebé</li>
-<li>Arábia Saudita — Salem Al-Dawsari</li>
-<li>Uruguai — Federico Valverde</li>
-<li>França — Kylian Mbappé</li>
-<li>Senegal — Sadio Mané</li>
-<li>Iraque — Aymen Hussein</li>
-<li>Noruega — Erling Haaland</li>
-<li>Argentina — Lionel Messi</li>
-<li>Argélia — Riyad Mahrez</li>
-<li>Áustria — David Alaba</li>
-<li>Jordânia — Musa Al-Taamari</li>
-<li>Portugal — Cristiano Ronaldo</li>
-<li>RD Congo — Cédric Bakambu</li>
-<li>Uzbequistão — Eldor Shomurodov</li>
-<li>Colômbia — Luis Díaz</li>
-<li>Inglaterra — Jude Bellingham</li>
-<li>Croácia — Luka Modrić</li>
-<li>Gana — Mohammed Kudus</li>
-<li>Panamá — Adalberto Carrasquilla</li>
-</ul>
-</div>
-</section>
-
-<section id="escalacoes" class="tab">
-<h2>📋 Escalações Base</h2>
-<div class="card">
-<p><strong>Brasil:</strong> Alisson; Danilo, Marquinhos, Militão, Arana; Bruno Guimarães, Paquetá; Rodrygo, Vinícius Júnior, Raphinha; Endrick.</p>
-<br>
-<p><strong>Argentina:</strong> Martínez; Molina, Romero, Otamendi, Tagliafico; De Paul, Mac Allister, Enzo Fernández; Messi, Julián Álvarez, Di María.</p>
-<br>
-<p><strong>França:</strong> Maignan; Koundé, Saliba, Upamecano, Theo Hernández; Camavinga, Tchouaméni, Griezmann; Dembélé, Mbappé, Kolo Muani.</p>
-<br>
-<p><strong>Portugal:</strong> Diogo Costa; João Cancelo, Rúben Dias, Pepe, Nuno Mendes; Bruno Fernandes, Vitinha, Bernardo Silva; Rafael Leão, Cristiano Ronaldo, João Félix.</p>
-<br>
-<p><strong>Inglaterra:</strong> Pickford; Walker, Stones, Maguire, Shaw; Rice, Bellingham; Saka, Foden, Grealish; Harry Kane.</p>
-<br>
-<p><strong>Espanha:</strong> Unai Simón; Carvajal, Laporte, Le Normand, Balde; Rodri, Pedri, Gavi; Yamal, Morata, Nico Williams.</p>
-<br>
-<p><strong>Alemanha:</strong> Ter Stegen; Kimmich, Rüdiger, Tah, Raum; Gündogan, Kroos, Musiala; Sané, Havertz, Wirtz.</p>
-<br>
-<p><strong>Uruguai:</strong> Rochet; Araújo, Giménez, Olivera, Viña; Valverde, Bentancur, De la Cruz; Pellistri, Darwin Núñez, Maxi Araújo.</p>
-<br>
-<p><strong>Holanda:</strong> Verbruggen; Dumfries, Van Dijk, Aké, Blind; De Jong, Reijnders, Simons; Malen, Gakpo, Depay.</p>
-<br>
-<p><strong>Bélgica:</strong> Casteels; Castagne, Faes, Vertonghen, Theate; Onana, Tielemans; Doku, De Bruyne, Trossard; Lukaku.</p>
-<br>
-<p><strong>Obs:</strong> As escalações acima representam formações base recentes e podem mudar até a Copa de 2026.</p>
-</div>
 </section>
 
 <section id="quiz" class="tab">
-<h2>🧠 Quiz da Copa</h2>
+
 <div class="quiz-box">
-<h3 id="question">Quem é o jogador estrela da França?</h3>
-<div id="answers">
-<button onclick="checkAnswer('A')">A) Mbappé</button><br>
-<button onclick="checkAnswer('B')">B) Modrić</button><br>
-<button onclick="checkAnswer('C')">C) Salah</button><br>
-<button onclick="checkAnswer('D')">D) Son</button>
+
+<h2 id="question">Pergunta</h2>
+
+<div id="answers"></div>
+
+<h3 id="score"></h3>
+
 </div>
-<p id="result"></p>
-</div>
+
+</section>
+
+<section id="sobre" class="tab">
+
+<h1>🏆 Sobre a Copa do Mundo 2026</h1>
+
+<br>
+
+<p>
+A Copa do Mundo FIFA 2026 será a primeira edição com 48 seleções participantes.
+O torneio será sediado por México, Canadá e Estados Unidos.
+</p>
+
+<br>
+
+<p>
+O campeonato promete ser o maior da história do futebol mundial,
+com mais jogos, mais torcedores e grandes craques.
+</p>
+
 </section>
 
 <footer>
-<p>⚽ Site criado para projeto escolar sobre a Copa do Mundo 2026</p>
+
+<p>
+Desenvolvido para projeto escolar sobre a Copa do Mundo 2026 ⚽
+</p>
+
 </footer>
 
 <script>
+
 function showTab(tabId){
-const tabs=document.querySelectorAll('.tab');
-tabs.forEach(tab=>tab.classList.remove('active'));
-document.getElementById(tabId).classList.add('active');
-window.scrollTo(0,0);
+
+    document.querySelectorAll('.tab').forEach(tab=>{
+        tab.classList.remove('active');
+    });
+
+    document.getElementById(tabId).classList.add('active');
 }
 
-function checkAnswer(answer){
-const result=document.getElementById('result');
+const quizData = [
 
-if(answer==='A'){
-result.innerHTML='✅ Correto! Mbappé é o principal destaque da França.';
-result.style.color='green';
-}else{
-result.innerHTML='❌ Resposta incorreta!';
-result.style.color='red';
+{
+question:'Qual seleção tem 5 Copas do Mundo?',
+answers:['Argentina','Brasil','França','Alemanha'],
+correct:1
+},
+
+{
+question:'Quem é o craque da França?',
+answers:['Mbappé','Messi','Neymar','Kane'],
+correct:0
+},
+
+{
+question:'Qual país sediará a Copa junto com EUA e Canadá?',
+answers:['México','Brasil','Portugal','Japão'],
+correct:0
+},
+
+{
+question:'Quem é o principal jovem da Espanha?',
+answers:['Rodri','Pedri','Lamine Yamal','Morata'],
+correct:2
 }
+
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+function loadQuiz(){
+
+    const q = quizData[currentQuestion];
+
+    document.getElementById('question').innerText = q.question;
+
+    const answersDiv = document.getElementById('answers');
+
+    answersDiv.innerHTML = '';
+
+    q.answers.forEach((answer,index)=>{
+
+        const btn = document.createElement('button');
+
+        btn.innerText = answer;
+
+        btn.onclick = ()=>checkAnswer(index);
+
+        answersDiv.appendChild(btn);
+
+    });
 }
+
+function checkAnswer(index){
+
+    if(index === quizData[currentQuestion].correct){
+
+        score++;
+
+    }
+
+    currentQuestion++;
+
+    if(currentQuestion < quizData.length){
+
+        loadQuiz();
+
+    }else{
+
+        document.getElementById('question').innerText = '🏆 Quiz finalizado!';
+
+        document.getElementById('answers').innerHTML = '';
+
+        document.getElementById('score').innerText =
+        'Sua pontuação: ' + score + ' / ' + quizData.length;
+
+    }
+}
+
+loadQuiz();
+
+const canvas = document.getElementById('bg');
+
+const ctx = canvas.getContext('2d');
+
+function resizeCanvas(){
+
+    canvas.width = window.innerWidth;
+
+    canvas.height = window.innerHeight;
+}
+
+resizeCanvas();
+
+window.addEventListener('resize',resizeCanvas);
+
+let balls = [];
+
+for(let i=0;i<60;i++){
+
+    balls.push({
+
+        x:Math.random()*canvas.width,
+        y:Math.random()*canvas.height,
+        r:Math.random()*4+1,
+        dx:(Math.random()-0.5)*1.5,
+        dy:(Math.random()-0.5)*1.5
+
+    });
+}
+
+function animate(){
+
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    ctx.fillStyle='rgba(255,255,255,0.7)';
+
+    balls.forEach(ball=>{
+
+        ctx.beginPath();
+
+        ctx.arc(ball.x,ball.y,ball.r,0,Math.PI*2);
+
+        ctx.fill();
+
+        ball.x += ball.dx;
+
+        ball.y += ball.dy;
+
+        if(ball.x < 0 || ball.x > canvas.width){
+            ball.dx *= -1;
+        }
+
+        if(ball.y < 0 || ball.y > canvas.height){
+            ball.dy *= -1;
+        }
+
+    });
+
+    requestAnimationFrame(animate);
+}
+
+animate();
+
 </script>
 
 </body>
 </html>
-```
-
-## Como usar no GitHub
-
-1. Copie todo o código acima.
-2. Crie um arquivo chamado `index.html`.
-3. Cole o código.
-4. Envie para um repositório no GitHub.
-5. Ative o GitHub Pages nas configurações do repositório.
