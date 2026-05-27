@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Copa do Mundo 2026</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg,#d8f3dc,#95d5b2);
+    color:#081c15;
+}
+
+header{
+    background:#1b4332;
+    color:white;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+header h1{
+    font-size:3rem;
+}
+
+header p{
+    margin-top:10px;
+    font-size:1.1rem;
+}
+
+nav{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    background:#2d6a4f;
+    padding:15px;
+    position:sticky;
+    top:0;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    background:#40916c;
+    padding:10px 15px;
+    border-radius:10px;
+    transition:0.3s;
+    font-weight:bold;
+}
+
+nav a:hover{
+    background:#74c69d;
+    transform:scale(1.05);
+}
+
+section{
+    padding:50px 8%;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:2rem;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:18px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    color:#2d6a4f;
+    margin-bottom:10px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+th{
+    background:#2d6a4f;
+    color:white;
+    padding:15px;
+}
+
+td{
+    padding:12px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+
+tr:hover{
+    background:#f1fff5;
+}
+
+.quiz{
+    background:white;
+    padding:30px;
+    max-width:700px;
+    margin:auto;
+    border-radius:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+.quiz button{
+    padding:12px 20px;
+    margin:10px;
+    border:none;
+    border-radius:10px;
+    background:#2d6a4f;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.quiz button:hover{
+    background:#40916c;
+}
+
+#resultado{
+    margin-top:20px;
+    font-size:1.2rem;
+    font-weight:bold;
+}
+
+footer{
+    background:#081c15;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+img{
+    width:100%;
+    border-radius:12px;
+    margin-bottom:15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>⚽ Copa do Mundo 2026</h1>
+    <p>As seleções classificadas, estrelas e curiosidades da maior Copa da história.</p>
+</header>
+
+<nav>
+    <a href="#selecoes">Seleções</a>
+    <a href="#jogadores">Jogadores</a>
+    <a href="#classificados">Classificados</a>
+    <a href="#quiz">Quiz</a>
+</nav>
+
+<section id="selecoes">
+
+<h2>🌎 Seleções Favoritas</h2>
+
+<div class="cards">
+
+<div class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/en/0/05/Brazil_national_football_team_logo.svg">
+    <h3>Brasil 🇧🇷</h3>
+    <p>
+    Possível destaque:
+    Alisson, Marquinhos, Vinícius Júnior, Rodrygo e Neymar.
+    </p>
+</div>
+
+<div class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/en/c/c1/Argentina_national_football_team_logo.svg">
+    <h3>Argentina 🇦🇷</h3>
+    <p>
+    Atual campeã do mundo com Lionel Messi liderando a equipe.
+    </p>
+</div>
+
+<div class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/en/b/ba/France_national_football_team_seal.svg">
+    <h3>França 🇫🇷</h3>
+    <p>
+    Mbappé continua sendo a principal estrela da seleção francesa.
+    </p>
+</div>
+
+<div class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/en/e/eb/Spain_national_football_team_crest.svg">
+    <h3>Espanha 🇪🇸</h3>
+    <p>
+    Nova geração espanhola liderada por jovens talentos.
+    </p>
+</div>
+
+</div>
+</section>
+
+<section id="jogadores">
+
+<h2>⭐ Jogadores em Destaque</h2>
+
+<div class="cards">
+
+<div class="card">
+    <h3>Vinícius Júnior</h3>
+    <p>Atacante do Brasil e um dos favoritos ao prêmio de melhor do mundo.</p>
+</div>
+
+<div class="card">
+    <h3>Lionel Messi</h3>
+    <p>Campeão mundial em 2022 e um dos maiores jogadores da história.</p>
+</div>
+
+<div class="card">
+    <h3>Kylian Mbappé</h3>
+    <p>Grande estrela da França e destaque das últimas Copas.</p>
+</div>
+
+<div class="card">
+    <h3>Jude Bellingham</h3>
+    <p>Meio-campista inglês considerado um dos melhores jovens do mundo.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="classificados">
+
+<h2>🏆 Países Classificados</h2>
+
+<table>
+
+<tr>
+<th>País</th>
+<th>Continente</th>
+</tr>
+
+<tr><td>Brasil</td><td>América do Sul</td></tr>
+<tr><td>Argentina</td><td>América do Sul</td></tr>
+<tr><td>França</td><td>Europa</td></tr>
+<tr><td>Espanha</td><td>Europa</td></tr>
+<tr><td>Alemanha</td><td>Europa</td></tr>
+<tr><td>Portugal</td><td>Europa</td></tr>
+<tr><td>Estados Unidos</td><td>América do Norte</td></tr>
+<tr><td>México</td><td>América do Norte</td></tr>
+<tr><td>Canadá</td><td>América do Norte</td></tr>
+<tr><td>Japão</td><td>Ásia</td></tr>
+<tr><td>Marrocos</td><td>África</td></tr>
+
+</table>
+
+</section>
+
+<section id="quiz">
+
+<h2>🧠 Quiz Interativo</h2>
+
+<div class="quiz">
+
+<p><strong>Quem venceu a Copa do Mundo de 2022?</strong></p>
+
+<button onclick="verificar('errado')">França</button>
+<button onclick="verificar('certo')">Argentina</button>
+<button onclick="verificar('errado')">Brasil</button>
+
+<p id="resultado"></p>
+
+</div>
+
+</section>
+
+<footer>
+<p>Projeto escolar sobre a Copa do Mundo FIFA 2026 ⚽</p>
+</footer>
+
+<script>
+
+function verificar(resposta){
+
+    const resultado = document.getElementById("resultado");
+
+    if(resposta === "certo"){
+        resultado.innerHTML = "✅ Correto! A Argentina venceu a Copa de 2022.";
+        resultado.style.color = "green";
+    }
+
+    else{
+        resultado.innerHTML = "❌ Resposta incorreta!";
+        resultado.style.color = "red";
+    }
+
+}
+
+</script>
+
+</body>
+</html>
