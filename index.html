@@ -1,10 +1,16 @@
+# Site Copa do Mundo 2026 - Completo
+
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Copa do Mundo 2026</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -15,21 +21,27 @@ box-sizing:border-box;
 }
 
 body{
-font-family:Arial, Helvetica, sans-serif;
+font-family:'Poppins',sans-serif;
 background:linear-gradient(135deg,#d8f3dc,#95d5b2);
 color:#081c15;
 }
 
 header{
-background:#1b4332;
+background:linear-gradient(135deg,#1b4332,#2d6a4f);
 color:white;
-padding:30px;
+padding:60px 20px;
 text-align:center;
+box-shadow:0 4px 15px rgba(0,0,0,0.2);
 }
 
 header h1{
-font-size:3rem;
-margin-bottom:10px;
+font-size:3.5rem;
+margin-bottom:15px;
+}
+
+header p{
+font-size:1.2rem;
+opacity:0.9;
 }
 
 nav{
@@ -37,27 +49,29 @@ display:flex;
 justify-content:center;
 flex-wrap:wrap;
 gap:15px;
-padding:15px;
+padding:18px;
 background:#2d6a4f;
 position:sticky;
 top:0;
 z-index:1000;
+backdrop-filter:blur(10px);
 }
 
 nav button{
-padding:12px 20px;
+padding:12px 22px;
 border:none;
-border-radius:12px;
+border-radius:15px;
 background:#40916c;
 color:white;
-font-weight:bold;
+font-weight:600;
 cursor:pointer;
 transition:0.3s;
+font-size:1rem;
 }
 
 nav button:hover{
 background:#74c69d;
-transform:scale(1.05);
+transform:translateY(-3px);
 }
 
 .aba{
@@ -71,58 +85,67 @@ display:block;
 
 h2{
 text-align:center;
-margin-bottom:30px;
-font-size:2rem;
+font-size:2.5rem;
+margin-bottom:40px;
+color:#081c15;
 }
 
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
 
 .card{
 background:white;
-padding:20px;
-border-radius:20px;
+padding:25px;
+border-radius:25px;
 text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
 transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-8px);
 }
 
 .desenho{
 font-size:4rem;
-margin-bottom:15px;
+margin-bottom:18px;
 }
 
 .card h3{
+font-size:1.4rem;
 margin-bottom:10px;
-color:#2d6a4f;
+color:#1b4332;
+}
+
+.card p{
+font-size:0.95rem;
+line-height:1.5;
 }
 
 table{
 width:100%;
 border-collapse:collapse;
 background:white;
-border-radius:15px;
+border-radius:20px;
 overflow:hidden;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
 th{
-background:#2d6a4f;
+background:#1b4332;
 color:white;
-padding:15px;
+padding:18px;
+font-size:1rem;
 }
 
 td{
-padding:12px;
+padding:15px;
 text-align:center;
 border-bottom:1px solid #ddd;
+font-size:0.95rem;
 }
 
 tr:hover{
@@ -131,26 +154,33 @@ background:#f1fff5;
 
 .quiz{
 background:white;
-padding:30px;
-max-width:700px;
+padding:40px;
+max-width:750px;
 margin:auto;
-border-radius:20px;
+border-radius:25px;
 text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
 .quiz button{
 padding:12px 20px;
 margin:10px;
 border:none;
-border-radius:10px;
+border-radius:12px;
 background:#2d6a4f;
 color:white;
+font-weight:600;
 cursor:pointer;
+transition:0.3s;
+}
+
+.quiz button:hover{
+background:#40916c;
+transform:scale(1.05);
 }
 
 #resultado{
-margin-top:15px;
+margin-top:20px;
 font-size:1.1rem;
 font-weight:bold;
 }
@@ -159,13 +189,17 @@ footer{
 background:#081c15;
 color:white;
 text-align:center;
-padding:20px;
-margin-top:40px;
+padding:25px;
+margin-top:50px;
 }
 
 @media(max-width:768px){
 
 header h1{
+font-size:2.2rem;
+}
+
+h2{
 font-size:2rem;
 }
 
@@ -178,337 +212,57 @@ font-size:2rem;
 
 <header>
 <h1>⚽ Copa do Mundo 2026</h1>
-<p>Site interativo com seleções, escalações e jogadores</p>
+<p>Seleções, estrelas, escalações e curiosidades da maior Copa da história</p>
 </header>
 
 <nav>
-<button onclick="mostrarAba('selecoes')">48 Seleções</button>
-<button onclick="mostrarAba('escalacoes')">Escalações</button>
-<button onclick="mostrarAba('jogadores')">Jogadores</button>
-<button onclick="mostrarAba('quiz')">Quiz</button>
+<button onclick="mostrarAba('selecoes')">🌍 Seleções</button>
+<button onclick="mostrarAba('escalacoes')">📋 Escalações</button>
+<button onclick="mostrarAba('jogadores')">⭐ Estrelas</button>
+<button onclick="mostrarAba('quiz')">🧠 Quiz</button>
 </nav>
-
-<!-- ABA SELEÇÕES -->
 
 <section id="selecoes" class="aba ativa">
 
-<h2>🌍 As 48 Seleções</h2>
+<h2>🌎 Seleções Confirmadas</h2>
 
 <div class="cards">
 
-<div class="card">
-<div class="desenho">⚽</div>
-<h3>Brasil</h3>
-<p>América do Sul</p>
-</div>
-
-<div class="card">
-<div class="desenho">🏆</div>
-<h3>Argentina</h3>
-<p>América do Sul</p>
-</div>
-
-<div class="card">
-<div class="desenho">🔥</div>
-<h3>França</h3>
-<p>Europa</p>
-</div>
-
-<div class="card">
-<div class="desenho">🦅</div>
-<h3>Alemanha</h3>
-<p>Europa</p>
-</div>
-
-<div class="card">
-<div class="desenho">⭐</div>
-<h3>Espanha</h3>
-<p>Europa</p>
-</div>
-
-<div class="card">
-<div class="desenho">⚡</div>
-<h3>Portugal</h3>
-<p>Europa</p>
-</div>
-
-<div class="card">
-<div class="desenho">🛡️</div>
-<h3>Inglaterra</h3>
-<p>Europa</p>
-</div>
-
-<div class="card">
-<div class="desenho">🌟</div>
-<h3>Itália</h3>
-<p>Europa</p>
-</div>
-
-<div class="card">
-<div class="desenho">🐆</div>
-<h3>Uruguai</h3>
-<p>América do Sul</p>
-</div>
-
-<div class="card">
-<div class="desenho">💥</div>
-<h3>Colômbia</h3>
-<p>América do Sul</p>
-</div>
-
-<div class="card">
-<div class="desenho">🦁</div>
-<h3>Estados Unidos</h3>
-<p>América do Norte</p>
-</div>
-
-<div class="card">
-<div class="desenho">🌵</div>
-<h3>México</h3>
-<p>América do Norte</p>
-</div>
-
-<div class="card">
-<div class="desenho">❄️</div>
-<h3>Canadá</h3>
-<p>América do Norte</p>
-</div>
-
-<div class="card">
-<div class="desenho">🐉</div>
-<h3>Japão</h3>
-<p>Ásia</p>
-</div>
-
-<div class="card">
-<div class="desenho">🌊</div>
-<h3>Coreia do Sul</h3>
-<p>Ásia</p>
-</div>
-
-<div class="card">
-<div class="desenho">☀️</div>
-<h3>Irã</h3>
-<p>Ásia</p>
-</div>
-
-<div class="card">
-<div class="desenho">🦊</div>
-<h3>Marrocos</h3>
-<p>África</p>
-</div>
-
-<div class="card">
-<div class="desenho">🐘</div>
-<h3>Senegal</h3>
-<p>África</p>
-</div>
-
-<div class="card">
-<div class="desenho">🌍</div>
-<h3>Nigéria</h3>
-<p>África</p>
-</div>
-
-<div class="card">
-<div class="desenho">⚔️</div>
-<h3>Croácia</h3>
-<p>Europa</p>
-</div>
-
-<div class="card">
-<div class="desenho">🏹</div>
-<h3>Bélgica</h3>
-<p>Europa</p>
-</div>
-
-<div class="card">
-<div class="desenho">🧊</div>
-<h3>Holanda</h3>
-<p>Europa</p>
-</div>
-
-<div class="card">
-<div class="desenho">🐺</div>
-<h3>Suécia</h3>
-<p>Europa</p>
-</div>
-
-<div class="card">
-<div class="desenho">🌙</div>
-<h3>Turquia</h3>
-<p>Europa</p>
-</div>
-
-<div class="card">
-<div class="desenho">🦅</div>
-<h3>Polônia</h3>
-<p>Europa</p>
-</div>
-
-<div class="card">
-<div class="desenho">🔥</div>
-<h3>Suíça</h3>
-<p>Europa</p>
-</div>
-
-<div class="card">
-<div class="desenho">⭐</div>
-<h3>Dinamarca</h3>
-<p>Europa</p>
-</div>
-
-<div class="card">
-<div class="desenho">⚽</div>
-<h3>Áustria</h3>
-<p>Europa</p>
-</div>
-
-<div class="card">
-<div class="desenho">🛡️</div>
-<h3>Sérvia</h3>
-<p>Europa</p>
-</div>
-
-<div class="card">
-<div class="desenho">🐅</div>
-<h3>Camarões</h3>
-<p>África</p>
-</div>
-
-<div class="card">
-<div class="desenho">🌟</div>
-<h3>Gana</h3>
-<p>África</p>
-</div>
-
-<div class="card">
-<div class="desenho">⚡</div>
-<h3>Egito</h3>
-<p>África</p>
-</div>
-
-<div class="card">
-<div class="desenho">🌍</div>
-<h3>Argélia</h3>
-<p>África</p>
-</div>
-
-<div class="card">
-<div class="desenho">🦁</div>
-<h3>Tunísia</h3>
-<p>África</p>
-</div>
-
-<div class="card">
-<div class="desenho">🐉</div>
-<h3>Austrália</h3>
-<p>Oceania</p>
-</div>
-
-<div class="card">
-<div class="desenho">🏝️</div>
-<h3>Nova Zelândia</h3>
-<p>Oceania</p>
-</div>
-
-<div class="card">
-<div class="desenho">⚽</div>
-<h3>Chile</h3>
-<p>América do Sul</p>
-</div>
-
-<div class="card">
-<div class="desenho">🏆</div>
-<h3>Peru</h3>
-<p>América do Sul</p>
-</div>
-
-<div class="card">
-<div class="desenho">🔥</div>
-<h3>Equador</h3>
-<p>América do Sul</p>
-</div>
-
-<div class="card">
-<div class="desenho">⭐</div>
-<h3>Paraguai</h3>
-<p>América do Sul</p>
-</div>
-
-<div class="card">
-<div class="desenho">⚡</div>
-<h3>Venezuela</h3>
-<p>América do Sul</p>
-</div>
-
-<div class="card">
-<div class="desenho">🦅</div>
-<h3>Costa Rica</h3>
-<p>América do Norte</p>
-</div>
-
-<div class="card">
-<div class="desenho">🌵</div>
-<h3>Panamá</h3>
-<p>América do Norte</p>
-</div>
-
-<div class="card">
-<div class="desenho">🔥</div>
-<h3>Jamaica</h3>
-<p>América do Norte</p>
-</div>
-
-<div class="card">
-<div class="desenho">🦊</div>
-<h3>Arábia Saudita</h3>
-<p>Ásia</p>
-</div>
-
-<div class="card">
-<div class="desenho">🐘</div>
-<h3>Catar</h3>
-<p>Ásia</p>
-</div>
-
-<div class="card">
-<div class="desenho">🌊</div>
-<h3>Emirados Árabes</h3>
-<p>Ásia</p>
-</div>
-
-<div class="card">
-<div class="desenho">⭐</div>
-<h3>Iraque</h3>
-<p>Ásia</p>
-</div>
+<div class="card"><div class="desenho">⚽</div><h3>Brasil</h3><p>Maior campeão da história com 5 títulos.</p></div>
+<div class="card"><div class="desenho">🏆</div><h3>Argentina</h3><p>Atual campeã mundial.</p></div>
+<div class="card"><div class="desenho">🔥</div><h3>França</h3><p>Uma das seleções favoritas.</p></div>
+<div class="card"><div class="desenho">⭐</div><h3>Portugal</h3><p>Seleção liderada por Cristiano Ronaldo.</p></div>
+<div class="card"><div class="desenho">🛡️</div><h3>Inglaterra</h3><p>Nova geração muito forte.</p></div>
+<div class="card"><div class="desenho">⚡</div><h3>Espanha</h3><p>Time jovem e técnico.</p></div>
+<div class="card"><div class="desenho">🦅</div><h3>Alemanha</h3><p>Quatro vezes campeã do mundo.</p></div>
+<div class="card"><div class="desenho">🌊</div><h3>Holanda</h3><p>Tradicional seleção europeia.</p></div>
+<div class="card"><div class="desenho">🦁</div><h3>Bélgica</h3><p>Equipe recheada de estrelas.</p></div>
+<div class="card"><div class="desenho">🌍</div><h3>Marrocos</h3><p>Grande surpresa da Copa de 2022.</p></div>
+<div class="card"><div class="desenho">🐉</div><h3>Japão</h3><p>Seleção asiática em evolução.</p></div>
+<div class="card"><div class="desenho">🌵</div><h3>México</h3><p>País-sede da Copa 2026.</p></div>
 
 </div>
 
 </section>
 
-<!-- ABA ESCALAÇÕES -->
-
 <section id="escalacoes" class="aba">
 
-<h2>📋 Escalações</h2>
+<h2>📋 Escalações Base</h2>
 
 <table>
-
 <tr>
 <th>Seleção</th>
-<th>Possível Escalação</th>
+<th>Escalação</th>
 </tr>
 
 <tr>
 <td>Brasil</td>
-<td>Alisson, Danilo, Marquinhos, Militão, Arana, Bruno Guimarães, Paquetá, Neymar, Rodrygo, Vinícius Jr e Endrick</td>
+<td>Alisson, Danilo, Marquinhos, Militão, Guilherme Arana, Bruno Guimarães, Paquetá, Neymar, Rodrygo, Vinícius Jr e Endrick</td>
 </tr>
 
 <tr>
 <td>Argentina</td>
-<td>Martínez, Molina, Romero, Otamendi, Tagliafico, De Paul, Mac Allister, Enzo Fernández, Messi, Julián Álvarez e Lautaro</td>
+<td>Emiliano Martínez, Molina, Romero, Otamendi, Tagliafico, De Paul, Enzo Fernández, Mac Allister, Messi, Julián Álvarez e Lautaro Martínez</td>
 </tr>
 
 <tr>
@@ -518,18 +272,51 @@ font-size:2rem;
 
 <tr>
 <td>Portugal</td>
-<td>Diogo Costa, João Cancelo, Rúben Dias, Pepe, Nuno Mendes, Bernardo Silva, Bruno Fernandes, Vitinha, Rafael Leão, Cristiano Ronaldo e João Félix</td>
+<td>Diogo Costa, João Cancelo, Rúben Dias, Pepe, Nuno Mendes, Bruno Fernandes, Bernardo Silva, Vitinha, Rafael Leão, Cristiano Ronaldo e João Félix</td>
+</tr>
+
+<tr>
+<td>Inglaterra</td>
+<td>Pickford, Walker, Stones, Maguire, Shaw, Rice, Bellingham, Foden, Saka, Kane e Rashford</td>
+</tr>
+
+<tr>
+<td>Espanha</td>
+<td>Unai Simón, Carvajal, Laporte, Le Normand, Cucurella, Rodri, Pedri, Gavi, Yamal, Morata e Nico Williams</td>
+</tr>
+
+<tr>
+<td>Alemanha</td>
+<td>Neuer, Kimmich, Rüdiger, Tah, Raum, Gündogan, Musiala, Wirtz, Havertz e Sané</td>
+</tr>
+
+<tr>
+<td>Holanda</td>
+<td>Verbruggen, Dumfries, Van Dijk, De Ligt, Aké, De Jong, Simons, Gakpo, Depay e Malen</td>
+</tr>
+
+<tr>
+<td>Bélgica</td>
+<td>Casteels, Castagne, Vertonghen, Faes, Theate, De Bruyne, Onana, Tielemans, Doku, Lukaku e Trossard</td>
+</tr>
+
+<tr>
+<td>Japão</td>
+<td>Suzuki, Tomiyasu, Itakura, Yoshida, Ito, Endo, Kubo, Mitoma, Minamino, Kamada e Ueda</td>
+</tr>
+
+<tr>
+<td>Marrocos</td>
+<td>Bono, Hakimi, Saïss, Aguerd, Mazraoui, Amrabat, Ounahi, Ziyech, Boufal, En-Nesyri e Brahim Díaz</td>
 </tr>
 
 </table>
 
 </section>
 
-<!-- ABA JOGADORES -->
-
 <section id="jogadores" class="aba">
 
-<h2>⭐ Jogadores em Destaque</h2>
+<h2>⭐ Estrelas das Seleções</h2>
 
 <div class="cards">
 
@@ -558,34 +345,66 @@ font-size:2rem;
 </div>
 
 <div class="card">
-<div class="desenho">🇳🇴</div>
-<h3>Erling Haaland</h3>
-<p>Noruega</p>
+<div class="desenho">🏴</div>
+<h3>Jude Bellingham</h3>
+<p>Inglaterra</p>
 </div>
 
 <div class="card">
-<div class="desenho">🇬🇧</div>
-<h3>Jude Bellingham</h3>
-<p>Inglaterra</p>
+<div class="desenho">🇪🇸</div>
+<h3>Lamine Yamal</h3>
+<p>Espanha</p>
+</div>
+
+<div class="card">
+<div class="desenho">🇩🇪</div>
+<h3>Jamal Musiala</h3>
+<p>Alemanha</p>
+</div>
+
+<div class="card">
+<div class="desenho">🇳🇱</div>
+<h3>Virgil van Dijk</h3>
+<p>Holanda</p>
+</div>
+
+<div class="card">
+<div class="desenho">🇧🇪</div>
+<h3>Kevin De Bruyne</h3>
+<p>Bélgica</p>
+</div>
+
+<div class="card">
+<div class="desenho">🇯🇵</div>
+<h3>Takefusa Kubo</h3>
+<p>Japão</p>
+</div>
+
+<div class="card">
+<div class="desenho">🇲🇦</div>
+<h3>Achraf Hakimi</h3>
+<p>Marrocos</p>
+</div>
+
+<div class="card">
+<div class="desenho">🇺🇾</div>
+<h3>Darwin Núñez</h3>
+<p>Uruguai</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- ABA QUIZ -->
-
 <section id="quiz" class="aba">
 
-<h2>🧠 Quiz Interativo</h2>
+<h2>🧠 Quiz da Copa</h2>
 
 <div class="quiz">
 
-<p><strong>Quem venceu a Copa do Mundo de 2022?</strong></p>
+<h3 id="pergunta"></h3>
 
-<button onclick="verificar('errado')">Brasil</button>
-<button onclick="verificar('certo')">Argentina</button>
-<button onclick="verificar('errado')">França</button>
+<div id="botoes"></div>
 
 <p id="resultado"></p>
 
@@ -594,7 +413,7 @@ font-size:2rem;
 </section>
 
 <footer>
-<p>Projeto Escolar - Copa do Mundo 2026 ⚽</p>
+<p>Projeto Escolar - Copa do Mundo FIFA 2026 ⚽</p>
 </footer>
 
 <script>
@@ -611,13 +430,74 @@ document.getElementById(id).classList.add('ativa');
 
 }
 
+const perguntas = [
+{
+pergunta:'Quem venceu a Copa do Mundo de 2022?',
+opcoes:['Brasil','Argentina','França'],
+correta:'Argentina'
+},
+{
+pergunta:'Qual país possui mais títulos mundiais?',
+opcoes:['Alemanha','Brasil','Itália'],
+correta:'Brasil'
+},
+{
+pergunta:'Quem é o maior artilheiro da história das Copas?',
+opcoes:['Messi','Pelé','Miroslav Klose'],
+correta:'Miroslav Klose'
+},
+{
+pergunta:'Qual seleção venceu a Copa de 2018?',
+opcoes:['França','Croácia','Argentina'],
+correta:'França'
+},
+{
+pergunta:'Em qual país aconteceu a Copa de 2014?',
+opcoes:['Brasil','África do Sul','Alemanha'],
+correta:'Brasil'
+},
+{
+pergunta:'Quem é conhecido como Rei do Futebol?',
+opcoes:['Pelé','Cristiano Ronaldo','Maradona'],
+correta:'Pelé'
+}
+];
+
+let perguntaAtual = 0;
+
+function carregarPergunta(){
+
+const pergunta = document.getElementById('pergunta');
+const botoes = document.getElementById('botoes');
+const resultado = document.getElementById('resultado');
+
+resultado.innerHTML = '';
+
+pergunta.innerHTML = perguntas[perguntaAtual].pergunta;
+
+botoes.innerHTML = '';
+
+perguntas[perguntaAtual].opcoes.forEach(opcao => {
+
+const botao = document.createElement('button');
+
+botao.innerHTML = opcao;
+
+botao.onclick = () => verificar(opcao);
+
+botoes.appendChild(botao);
+
+});
+
+}
+
 function verificar(resposta){
 
 const resultado = document.getElementById('resultado');
 
-if(resposta === 'certo'){
+if(resposta === perguntas[perguntaAtual].correta){
 
-resultado.innerHTML = '✅ Correto! A Argentina venceu a Copa de 2022.';
+resultado.innerHTML = '✅ Correto!';
 resultado.style.color = 'green';
 
 }else{
@@ -627,9 +507,38 @@ resultado.style.color = 'red';
 
 }
 
+perguntaAtual++;
+
+if(perguntaAtual < perguntas.length){
+
+setTimeout(() => {
+carregarPergunta();
+},1200);
+
+}else{
+
+setTimeout(() => {
+
+const pergunta = document.getElementById('pergunta');
+const botoes = document.getElementById('botoes');
+
+pergunta.innerHTML = '🏆 Quiz Finalizado!';
+
+botoes.innerHTML = '';
+
+resultado.innerHTML = 'Você completou todas as perguntas!';
+resultado.style.color = '#1b4332';
+
+},1200);
+
 }
+
+}
+
+carregarPergunta();
 
 </script>
 
 </body>
 </html>
+```
