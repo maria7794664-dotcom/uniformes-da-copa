@@ -9,160 +9,166 @@
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(135deg,#d8f3dc,#95d5b2);
-    color:#081c15;
+font-family:Arial, Helvetica, sans-serif;
+background:linear-gradient(135deg,#d8f3dc,#95d5b2);
+color:#081c15;
 }
 
 header{
-    background:#1b4332;
-    color:white;
-    padding:30px;
-    text-align:center;
-    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+background:#1b4332;
+color:white;
+padding:30px;
+text-align:center;
 }
 
 header h1{
-    font-size:3rem;
-}
-
-header p{
-    margin-top:10px;
-    font-size:1.1rem;
+font-size:3rem;
+margin-bottom:10px;
 }
 
 nav{
-    display:flex;
-    justify-content:center;
-    gap:15px;
-    flex-wrap:wrap;
-    background:#2d6a4f;
-    padding:15px;
-    position:sticky;
-    top:0;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+padding:15px;
+background:#2d6a4f;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
-nav a{
-    text-decoration:none;
-    color:white;
-    background:#40916c;
-    padding:10px 15px;
-    border-radius:10px;
-    transition:0.3s;
-    font-weight:bold;
+nav button{
+padding:12px 20px;
+border:none;
+border-radius:12px;
+background:#40916c;
+color:white;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
 }
 
-nav a:hover{
-    background:#74c69d;
-    transform:scale(1.05);
+nav button:hover{
+background:#74c69d;
+transform:scale(1.05);
 }
 
-section{
-    padding:50px 8%;
+.aba{
+display:none;
+padding:50px 8%;
+}
+
+.ativa{
+display:block;
 }
 
 h2{
-    text-align:center;
-    margin-bottom:30px;
-    font-size:2rem;
+text-align:center;
+margin-bottom:30px;
+font-size:2rem;
 }
 
 .cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
 }
 
 .card{
-    background:white;
-    padding:20px;
-    border-radius:18px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.1);
-    transition:0.3s;
+background:white;
+padding:20px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
 }
 
 .card:hover{
-    transform:translateY(-5px);
+transform:translateY(-5px);
+}
+
+.desenho{
+font-size:4rem;
+margin-bottom:15px;
 }
 
 .card h3{
-    color:#2d6a4f;
-    margin-bottom:10px;
+margin-bottom:10px;
+color:#2d6a4f;
 }
 
 table{
-    width:100%;
-    border-collapse:collapse;
-    background:white;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+width:100%;
+border-collapse:collapse;
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
 th{
-    background:#2d6a4f;
-    color:white;
-    padding:15px;
+background:#2d6a4f;
+color:white;
+padding:15px;
 }
 
 td{
-    padding:12px;
-    text-align:center;
-    border-bottom:1px solid #ddd;
+padding:12px;
+text-align:center;
+border-bottom:1px solid #ddd;
 }
 
 tr:hover{
-    background:#f1fff5;
+background:#f1fff5;
 }
 
 .quiz{
-    background:white;
-    padding:30px;
-    max-width:700px;
-    margin:auto;
-    border-radius:20px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+background:white;
+padding:30px;
+max-width:700px;
+margin:auto;
+border-radius:20px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
 .quiz button{
-    padding:12px 20px;
-    margin:10px;
-    border:none;
-    border-radius:10px;
-    background:#2d6a4f;
-    color:white;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.quiz button:hover{
-    background:#40916c;
+padding:12px 20px;
+margin:10px;
+border:none;
+border-radius:10px;
+background:#2d6a4f;
+color:white;
+cursor:pointer;
 }
 
 #resultado{
-    margin-top:20px;
-    font-size:1.2rem;
-    font-weight:bold;
+margin-top:15px;
+font-size:1.1rem;
+font-weight:bold;
 }
 
 footer{
-    background:#081c15;
-    color:white;
-    text-align:center;
-    padding:20px;
-    margin-top:40px;
+background:#081c15;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
 }
 
-img{
-    width:100%;
-    border-radius:12px;
-    margin-bottom:15px;
+@media(max-width:768px){
+
+header h1{
+font-size:2rem;
+}
+
 }
 
 </style>
@@ -171,117 +177,405 @@ img{
 <body>
 
 <header>
-    <h1>⚽ Copa do Mundo 2026</h1>
-    <p>As seleções classificadas, estrelas e curiosidades da maior Copa da história.</p>
+<h1>⚽ Copa do Mundo 2026</h1>
+<p>Site interativo com seleções, escalações e jogadores</p>
 </header>
 
 <nav>
-    <a href="#selecoes">Seleções</a>
-    <a href="#jogadores">Jogadores</a>
-    <a href="#classificados">Classificados</a>
-    <a href="#quiz">Quiz</a>
+<button onclick="mostrarAba('selecoes')">48 Seleções</button>
+<button onclick="mostrarAba('escalacoes')">Escalações</button>
+<button onclick="mostrarAba('jogadores')">Jogadores</button>
+<button onclick="mostrarAba('quiz')">Quiz</button>
 </nav>
 
-<section id="selecoes">
+<!-- ABA SELEÇÕES -->
 
-<h2>🌎 Seleções Favoritas</h2>
+<section id="selecoes" class="aba ativa">
+
+<h2>🌍 As 48 Seleções</h2>
 
 <div class="cards">
 
 <div class="card">
-    <img src="https://upload.wikimedia.org/wikipedia/en/0/05/Brazil_national_football_team_logo.svg">
-    <h3>Brasil 🇧🇷</h3>
-    <p>
-    Possível destaque:
-    Alisson, Marquinhos, Vinícius Júnior, Rodrygo e Neymar.
-    </p>
+<div class="desenho">⚽</div>
+<h3>Brasil</h3>
+<p>América do Sul</p>
 </div>
 
 <div class="card">
-    <img src="https://upload.wikimedia.org/wikipedia/en/c/c1/Argentina_national_football_team_logo.svg">
-    <h3>Argentina 🇦🇷</h3>
-    <p>
-    Atual campeã do mundo com Lionel Messi liderando a equipe.
-    </p>
+<div class="desenho">🏆</div>
+<h3>Argentina</h3>
+<p>América do Sul</p>
 </div>
 
 <div class="card">
-    <img src="https://upload.wikimedia.org/wikipedia/en/b/ba/France_national_football_team_seal.svg">
-    <h3>França 🇫🇷</h3>
-    <p>
-    Mbappé continua sendo a principal estrela da seleção francesa.
-    </p>
+<div class="desenho">🔥</div>
+<h3>França</h3>
+<p>Europa</p>
 </div>
 
 <div class="card">
-    <img src="https://upload.wikimedia.org/wikipedia/en/e/eb/Spain_national_football_team_crest.svg">
-    <h3>Espanha 🇪🇸</h3>
-    <p>
-    Nova geração espanhola liderada por jovens talentos.
-    </p>
+<div class="desenho">🦅</div>
+<h3>Alemanha</h3>
+<p>Europa</p>
+</div>
+
+<div class="card">
+<div class="desenho">⭐</div>
+<h3>Espanha</h3>
+<p>Europa</p>
+</div>
+
+<div class="card">
+<div class="desenho">⚡</div>
+<h3>Portugal</h3>
+<p>Europa</p>
+</div>
+
+<div class="card">
+<div class="desenho">🛡️</div>
+<h3>Inglaterra</h3>
+<p>Europa</p>
+</div>
+
+<div class="card">
+<div class="desenho">🌟</div>
+<h3>Itália</h3>
+<p>Europa</p>
+</div>
+
+<div class="card">
+<div class="desenho">🐆</div>
+<h3>Uruguai</h3>
+<p>América do Sul</p>
+</div>
+
+<div class="card">
+<div class="desenho">💥</div>
+<h3>Colômbia</h3>
+<p>América do Sul</p>
+</div>
+
+<div class="card">
+<div class="desenho">🦁</div>
+<h3>Estados Unidos</h3>
+<p>América do Norte</p>
+</div>
+
+<div class="card">
+<div class="desenho">🌵</div>
+<h3>México</h3>
+<p>América do Norte</p>
+</div>
+
+<div class="card">
+<div class="desenho">❄️</div>
+<h3>Canadá</h3>
+<p>América do Norte</p>
+</div>
+
+<div class="card">
+<div class="desenho">🐉</div>
+<h3>Japão</h3>
+<p>Ásia</p>
+</div>
+
+<div class="card">
+<div class="desenho">🌊</div>
+<h3>Coreia do Sul</h3>
+<p>Ásia</p>
+</div>
+
+<div class="card">
+<div class="desenho">☀️</div>
+<h3>Irã</h3>
+<p>Ásia</p>
+</div>
+
+<div class="card">
+<div class="desenho">🦊</div>
+<h3>Marrocos</h3>
+<p>África</p>
+</div>
+
+<div class="card">
+<div class="desenho">🐘</div>
+<h3>Senegal</h3>
+<p>África</p>
+</div>
+
+<div class="card">
+<div class="desenho">🌍</div>
+<h3>Nigéria</h3>
+<p>África</p>
+</div>
+
+<div class="card">
+<div class="desenho">⚔️</div>
+<h3>Croácia</h3>
+<p>Europa</p>
+</div>
+
+<div class="card">
+<div class="desenho">🏹</div>
+<h3>Bélgica</h3>
+<p>Europa</p>
+</div>
+
+<div class="card">
+<div class="desenho">🧊</div>
+<h3>Holanda</h3>
+<p>Europa</p>
+</div>
+
+<div class="card">
+<div class="desenho">🐺</div>
+<h3>Suécia</h3>
+<p>Europa</p>
+</div>
+
+<div class="card">
+<div class="desenho">🌙</div>
+<h3>Turquia</h3>
+<p>Europa</p>
+</div>
+
+<div class="card">
+<div class="desenho">🦅</div>
+<h3>Polônia</h3>
+<p>Europa</p>
+</div>
+
+<div class="card">
+<div class="desenho">🔥</div>
+<h3>Suíça</h3>
+<p>Europa</p>
+</div>
+
+<div class="card">
+<div class="desenho">⭐</div>
+<h3>Dinamarca</h3>
+<p>Europa</p>
+</div>
+
+<div class="card">
+<div class="desenho">⚽</div>
+<h3>Áustria</h3>
+<p>Europa</p>
+</div>
+
+<div class="card">
+<div class="desenho">🛡️</div>
+<h3>Sérvia</h3>
+<p>Europa</p>
+</div>
+
+<div class="card">
+<div class="desenho">🐅</div>
+<h3>Camarões</h3>
+<p>África</p>
+</div>
+
+<div class="card">
+<div class="desenho">🌟</div>
+<h3>Gana</h3>
+<p>África</p>
+</div>
+
+<div class="card">
+<div class="desenho">⚡</div>
+<h3>Egito</h3>
+<p>África</p>
+</div>
+
+<div class="card">
+<div class="desenho">🌍</div>
+<h3>Argélia</h3>
+<p>África</p>
+</div>
+
+<div class="card">
+<div class="desenho">🦁</div>
+<h3>Tunísia</h3>
+<p>África</p>
+</div>
+
+<div class="card">
+<div class="desenho">🐉</div>
+<h3>Austrália</h3>
+<p>Oceania</p>
+</div>
+
+<div class="card">
+<div class="desenho">🏝️</div>
+<h3>Nova Zelândia</h3>
+<p>Oceania</p>
+</div>
+
+<div class="card">
+<div class="desenho">⚽</div>
+<h3>Chile</h3>
+<p>América do Sul</p>
+</div>
+
+<div class="card">
+<div class="desenho">🏆</div>
+<h3>Peru</h3>
+<p>América do Sul</p>
+</div>
+
+<div class="card">
+<div class="desenho">🔥</div>
+<h3>Equador</h3>
+<p>América do Sul</p>
+</div>
+
+<div class="card">
+<div class="desenho">⭐</div>
+<h3>Paraguai</h3>
+<p>América do Sul</p>
+</div>
+
+<div class="card">
+<div class="desenho">⚡</div>
+<h3>Venezuela</h3>
+<p>América do Sul</p>
+</div>
+
+<div class="card">
+<div class="desenho">🦅</div>
+<h3>Costa Rica</h3>
+<p>América do Norte</p>
+</div>
+
+<div class="card">
+<div class="desenho">🌵</div>
+<h3>Panamá</h3>
+<p>América do Norte</p>
+</div>
+
+<div class="card">
+<div class="desenho">🔥</div>
+<h3>Jamaica</h3>
+<p>América do Norte</p>
+</div>
+
+<div class="card">
+<div class="desenho">🦊</div>
+<h3>Arábia Saudita</h3>
+<p>Ásia</p>
+</div>
+
+<div class="card">
+<div class="desenho">🐘</div>
+<h3>Catar</h3>
+<p>Ásia</p>
+</div>
+
+<div class="card">
+<div class="desenho">🌊</div>
+<h3>Emirados Árabes</h3>
+<p>Ásia</p>
+</div>
+
+<div class="card">
+<div class="desenho">⭐</div>
+<h3>Iraque</h3>
+<p>Ásia</p>
 </div>
 
 </div>
+
 </section>
 
-<section id="jogadores">
+<!-- ABA ESCALAÇÕES -->
+
+<section id="escalacoes" class="aba">
+
+<h2>📋 Escalações</h2>
+
+<table>
+
+<tr>
+<th>Seleção</th>
+<th>Possível Escalação</th>
+</tr>
+
+<tr>
+<td>Brasil</td>
+<td>Alisson, Danilo, Marquinhos, Militão, Arana, Bruno Guimarães, Paquetá, Neymar, Rodrygo, Vinícius Jr e Endrick</td>
+</tr>
+
+<tr>
+<td>Argentina</td>
+<td>Martínez, Molina, Romero, Otamendi, Tagliafico, De Paul, Mac Allister, Enzo Fernández, Messi, Julián Álvarez e Lautaro</td>
+</tr>
+
+<tr>
+<td>França</td>
+<td>Maignan, Koundé, Saliba, Upamecano, Theo Hernández, Camavinga, Tchouaméni, Griezmann, Dembélé, Mbappé e Giroud</td>
+</tr>
+
+<tr>
+<td>Portugal</td>
+<td>Diogo Costa, João Cancelo, Rúben Dias, Pepe, Nuno Mendes, Bernardo Silva, Bruno Fernandes, Vitinha, Rafael Leão, Cristiano Ronaldo e João Félix</td>
+</tr>
+
+</table>
+
+</section>
+
+<!-- ABA JOGADORES -->
+
+<section id="jogadores" class="aba">
 
 <h2>⭐ Jogadores em Destaque</h2>
 
 <div class="cards">
 
 <div class="card">
-    <h3>Vinícius Júnior</h3>
-    <p>Atacante do Brasil e um dos favoritos ao prêmio de melhor do mundo.</p>
+<div class="desenho">🇧🇷</div>
+<h3>Vinícius Júnior</h3>
+<p>Brasil</p>
 </div>
 
 <div class="card">
-    <h3>Lionel Messi</h3>
-    <p>Campeão mundial em 2022 e um dos maiores jogadores da história.</p>
+<div class="desenho">🇦🇷</div>
+<h3>Lionel Messi</h3>
+<p>Argentina</p>
 </div>
 
 <div class="card">
-    <h3>Kylian Mbappé</h3>
-    <p>Grande estrela da França e destaque das últimas Copas.</p>
+<div class="desenho">🇫🇷</div>
+<h3>Kylian Mbappé</h3>
+<p>França</p>
 </div>
 
 <div class="card">
-    <h3>Jude Bellingham</h3>
-    <p>Meio-campista inglês considerado um dos melhores jovens do mundo.</p>
+<div class="desenho">🇵🇹</div>
+<h3>Cristiano Ronaldo</h3>
+<p>Portugal</p>
+</div>
+
+<div class="card">
+<div class="desenho">🇳🇴</div>
+<h3>Erling Haaland</h3>
+<p>Noruega</p>
+</div>
+
+<div class="card">
+<div class="desenho">🇬🇧</div>
+<h3>Jude Bellingham</h3>
+<p>Inglaterra</p>
 </div>
 
 </div>
 
 </section>
 
-<section id="classificados">
+<!-- ABA QUIZ -->
 
-<h2>🏆 Países Classificados</h2>
-
-<table>
-
-<tr>
-<th>País</th>
-<th>Continente</th>
-</tr>
-
-<tr><td>Brasil</td><td>América do Sul</td></tr>
-<tr><td>Argentina</td><td>América do Sul</td></tr>
-<tr><td>França</td><td>Europa</td></tr>
-<tr><td>Espanha</td><td>Europa</td></tr>
-<tr><td>Alemanha</td><td>Europa</td></tr>
-<tr><td>Portugal</td><td>Europa</td></tr>
-<tr><td>Estados Unidos</td><td>América do Norte</td></tr>
-<tr><td>México</td><td>América do Norte</td></tr>
-<tr><td>Canadá</td><td>América do Norte</td></tr>
-<tr><td>Japão</td><td>Ásia</td></tr>
-<tr><td>Marrocos</td><td>África</td></tr>
-
-</table>
-
-</section>
-
-<section id="quiz">
+<section id="quiz" class="aba">
 
 <h2>🧠 Quiz Interativo</h2>
 
@@ -289,9 +583,9 @@ img{
 
 <p><strong>Quem venceu a Copa do Mundo de 2022?</strong></p>
 
-<button onclick="verificar('errado')">França</button>
-<button onclick="verificar('certo')">Argentina</button>
 <button onclick="verificar('errado')">Brasil</button>
+<button onclick="verificar('certo')">Argentina</button>
+<button onclick="verificar('errado')">França</button>
 
 <p id="resultado"></p>
 
@@ -300,24 +594,38 @@ img{
 </section>
 
 <footer>
-<p>Projeto escolar sobre a Copa do Mundo FIFA 2026 ⚽</p>
+<p>Projeto Escolar - Copa do Mundo 2026 ⚽</p>
 </footer>
 
 <script>
 
+function mostrarAba(id){
+
+const abas = document.querySelectorAll('.aba');
+
+abas.forEach(aba => {
+aba.classList.remove('ativa');
+});
+
+document.getElementById(id).classList.add('ativa');
+
+}
+
 function verificar(resposta){
 
-    const resultado = document.getElementById("resultado");
+const resultado = document.getElementById('resultado');
 
-    if(resposta === "certo"){
-        resultado.innerHTML = "✅ Correto! A Argentina venceu a Copa de 2022.";
-        resultado.style.color = "green";
-    }
+if(resposta === 'certo'){
 
-    else{
-        resultado.innerHTML = "❌ Resposta incorreta!";
-        resultado.style.color = "red";
-    }
+resultado.innerHTML = '✅ Correto! A Argentina venceu a Copa de 2022.';
+resultado.style.color = 'green';
+
+}else{
+
+resultado.innerHTML = '❌ Resposta incorreta!';
+resultado.style.color = 'red';
+
+}
 
 }
 
