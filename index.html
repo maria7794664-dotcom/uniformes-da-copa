@@ -217,6 +217,31 @@ canvas{
     z-index:-1;
 }
 
+.environment-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.environment-card{
+    background:rgba(255,255,255,0.08);
+    padding:20px;
+    border-radius:20px;
+    border:2px solid rgba(255,255,255,0.15);
+    backdrop-filter:blur(8px);
+    transition:0.3s;
+}
+
+.environment-card:hover{
+    transform:translateY(-5px);
+    background:rgba(255,255,255,0.14);
+}
+
+.environment-card h2{
+    color:#7CFC00;
+    margin-bottom:10px;
+}
+    
 @media(max-width:768px){
 
     header h1{
@@ -255,6 +280,8 @@ Site com grupos, seleções, craques e quiz da Copa do Mundo FIFA 2026
 <button onclick="showTab('quiz')">🧠 Quiz</button>
 
 <button onclick="showTab('sobre')">🏆 Sobre</button>
+
+<button onclick="showTab('meioambiente')">🌱 Meio Ambiente</button>
 
 </nav>
 
@@ -424,6 +451,85 @@ com mais jogos, mais torcedores e grandes craques.
 
 </section>
 
+<section id="meioambiente" class="tab">
+
+<h1 style="margin-bottom:20px;">
+🌱 Esporte e Preservação do Meio Ambiente
+</h1>
+
+<p style="margin-bottom:25px;">
+O esporte e o meio ambiente estão diretamente ligados. A prática esportiva em parques,
+praças, campos e áreas naturais depende da preservação desses espaços para garantir
+saúde, qualidade de vida e bem-estar para todos.
+</p>
+
+<div class="environment-grid">
+
+<div class="environment-card">
+<h2>⚽ Campos e Áreas Verdes</h2>
+<p>
+A preservação de áreas verdes permite a existência de campos esportivos,
+parques e espaços para atividades físicas ao ar livre, beneficiando atletas
+e a comunidade.
+</p>
+</div>
+
+<div class="environment-card">
+<h2>🚴 Mobilidade Sustentável</h2>
+<p>
+Utilizar bicicletas para ir aos treinos, competições ou à escola ajuda a reduzir
+a emissão de poluentes e ainda promove hábitos saudáveis.
+</p>
+</div>
+
+<div class="environment-card">
+<h2>🥤 Redução de Resíduos</h2>
+<p>
+Atletas e torcedores podem colaborar utilizando garrafas reutilizáveis e descartando
+corretamente o lixo durante eventos esportivos.
+</p>
+</div>
+
+<div class="environment-card">
+<h2>🌳 Esportes em Contato com a Natureza</h2>
+<p>
+Corridas, trilhas, ciclismo e caminhadas incentivam a valorização dos ambientes
+naturais e despertam a consciência sobre sua preservação.
+</p>
+</div>
+
+<div class="environment-card">
+<h2>🏟️ Eventos Esportivos Sustentáveis</h2>
+<p>
+Grandes competições podem adotar práticas sustentáveis, como reciclagem,
+economia de água e uso consciente de energia em estádios e arenas.
+</p>
+</div>
+
+<div class="environment-card">
+<h2>🌎 Nossa Responsabilidade</h2>
+<p>
+Cuidar do meio ambiente é garantir que as futuras gerações também possam praticar
+esportes, aproveitar espaços públicos e viver com mais qualidade de vida.
+</p>
+</div>
+
+</div>
+
+<br><br>
+
+<div class="quiz-box">
+
+<h2>💚 Esporte e Sustentabilidade</h2>
+
+<p style="font-size:18px;">
+"Preservar o meio ambiente é garantir espaços saudáveis para a prática esportiva hoje e no futuro."
+</p>
+
+</div>
+
+</section>
+    
 <footer>
 
 <p>
