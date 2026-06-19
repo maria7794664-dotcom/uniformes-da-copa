@@ -13,6 +13,68 @@
 
 <style>
 
+    #themeBtn{
+    margin-top:20px;
+    padding:12px 20px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:bold;
+    background:#ffffff;
+    color:#222;
+    transition:.3s;
+}
+
+body{
+    transition:background .4s,color .4s;
+}
+
+.group-card,
+.player-card,
+.quiz-box,
+.environment-card,
+.team,
+header,
+footer{
+    transition:.4s;
+}
+
+/* TEMA CLARO */
+
+body.light{
+    background:#f5f5f5;
+    color:#222;
+    background-image:none;
+}
+
+body.light header{
+    background:#ffffff;
+}
+
+body.light footer{
+    background:#ffffff;
+}
+
+body.light .group-card,
+body.light .player-card,
+body.light .quiz-box,
+body.light .environment-card{
+    background:#ffffff;
+    color:#222;
+    border:1px solid #ddd;
+}
+
+body.light .team{
+    background:#eeeeee;
+    color:#222;
+}
+
+body.light h1,
+body.light h2,
+body.light p{
+    color:#222;
+}
+
 *{
     margin:0;
     padding:0;
@@ -269,6 +331,10 @@ canvas{
 Site com grupos, seleções, craques e quiz da Copa do Mundo FIFA 2026
 </p>
 
+<button id="themeBtn" onclick="toggleTheme()">
+    🌙 Modo Escuro
+</button>
+    
 </header>
 
 <nav>
@@ -833,6 +899,27 @@ function animate(){
 }
 
 animate();
+
+    const themeBtn = document.getElementById("themeBtn");
+
+function toggleTheme(){
+
+    document.body.classList.toggle("light");
+
+    if(document.body.classList.contains("light")){
+        localStorage.setItem("theme","light");
+        themeBtn.innerHTML="🌞 Modo Claro";
+    }else{
+        localStorage.setItem("theme","dark");
+        themeBtn.innerHTML="🌙 Modo Escuro";
+    }
+
+}
+
+if(localStorage.getItem("theme")==="light"){
+    document.body.classList.add("light");
+    themeBtn.innerHTML="🌞 Modo Claro";
+}
 
 </script>
 
