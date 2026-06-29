@@ -353,6 +353,8 @@ Site com grupos, seleções, craques e quiz da Copa do Mundo FIFA 2026
 
 <button onclick="showTab('drogas')">🚔 Prevenção às Drogas</button>
 
+<button onclick="showTab('downloads')">📥 Downloads</button>
+    
 </nav>
 
 <section id="grupos" class="tab active">
@@ -817,6 +819,69 @@ A palestra mostrou que a prevenção é o melhor caminho. Buscar conhecimento, c
 </p>
 
 </div>
+
+</section>
+
+.download-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.download-card{
+    background:rgba(255,255,255,0.08);
+    border-radius:20px;
+    padding:20px;
+    text-align:center;
+    backdrop-filter:blur(8px);
+    transition:.3s;
+}
+
+.download-card:hover{
+    transform:translateY(-5px);
+}
+
+.download-card img{
+    width:100%;
+    border-radius:15px;
+    margin-bottom:15px;
+}
+
+.download-btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:12px 22px;
+    border-radius:12px;
+    background:linear-gradient(45deg,#2196f3,#00c853);
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.download-btn:hover{
+    transform:scale(1.05);
+}
+
+<section id="downloads" class="tab">
+
+<h1 style="margin-bottom:20px;">
+📥 Galeria de Downloads
+</h1>
+
+<p style="margin-bottom:25px;">
+Clique no botão abaixo da imagem para fazer o download.
+</p>
+
+<div class="download-grid">
+
+<div class="download-card">
+
+<img src="galinha.png" alt="Imagem 1">
+
+<a href="galinha.png" download class="download-btn">
+⬇️ Baixar Imagem
+
 
 </section>
     
